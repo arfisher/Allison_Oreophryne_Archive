@@ -1,0 +1,563 @@
+beastd
+head(beastd)
+namesbeast <- tips <- get_taxa_name(ggtree(beast))
+tips <- sub("FK_6919", "BPBM16806", tips)
+tips  <- sub("_.*$", "", tips)
+tips
+namesbeast
+beasttips <- data.frame("id"=tips, "treelabel"=namesbeast)
+beasttips
+beastd <- merge(beasttips, d, by="id", all=T)  # check that dataframe matches tree
+beastd
+tree <- beast <- rename_taxa(beast, beastd, treelabel, label) # change tip labels from the original labels to cleaned labels
+beast
+tree_names <- get_taxa_name(ggtree(tree))
+tree_names
+tree <- full_join(tree, d, by="label") # full tree with metadata
+tree
+tibb <- as_tibble(tree)
+tibb
+ss <- distinct(tibb, genus, species, .keep_all=T)  # distinct species per site
+ss
+todrop <- as_tibble(tree)$label %w/o% ss$label # drop 30 taxa at multiple sites, outgroups
+todrop <- grep("fronti", todrop, invert=T, value=T )  # leave in all the O. frontifasciata, drop 28 taxa
+outgroups <- c("UMMZ211174", "UMMZ211181", "UMMZ219489")
+todrop_og <- grep(paste(outgroups, collapse="|"), tree_names, value=T) 	# find index to drop - low sequence info
+treefull <- tree   # 240 tips
+tree <- treeio::drop.tip(tree, c(todrop, todrop_og))  # ingroup tree with only one sample per species - 212 tips
+tree
+write.beast(tree, file="out/beast_218_tree_asterophryinae_oreophryne.nex") #ingroup tree, 1 species per site
+tree
+get_taxa_name(ggtree(tree))
+tips
+namesbeast
+require(treeio)#
+require(ggtree)#
+require(dplyr)#
+require(phytools)#
+require(ggplot2)#
+require(ape)#
+source("clean_functions.R") # contains no_()
+source("clean_functions.R") # contains no_()
+beast <- read.beast("beast_asterophryinae12242022.nex")
+d <- read.csv("Table1_oreotype.csv")          # tree metadata spreadsheet
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")#
+#
+# type species and sisters#
+type <- c("Oreophryne A senckenbergiana", "Oreophryne A frontifasciata")#
+odds <- unlist(sapply(type, grep, d$tiplabid))#
+d$tipcol <- "black"#
+d$tipcol[odds] <- "blue"
+type
+d
+d <- read.csv("Table1_onlyoreo.csv")          # tree metadata spreadsheet
+beast <- read.beast("beast_asterophryinae12242022.nex")
+beast <- read.beast("beast_asterophryinae12242022.nex")#
+iqtree <- read.iqtree("asterophryinae_partitions.nex.timetree.nwk")#
+d <- read.csv("Table1_onlyoreo.csv")          # tree metadata spreadsheet#
+#
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+type <- c("Oreophryne A senckenbergiana", "Oreophryne A frontifasciata")#
+odds <- unlist(sapply(type, grep, d$tiplabid))#
+d$tipcol <- "black"#
+d$tipcol[odds] <- "blue"
+d
+beast <- read.beast("beast_asterophryinae12242022.nex")#
+iqtree <- read.iqtree("asterophryinae_partitions.nex.timetree.nwk")#
+d <- read.csv("Table1_oreotype.csv")          # tree metadata spreadsheet
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+d
+type <- c("Oreophryne A senckenbergiana", "Oreophryne A frontifasciata")#
+odds <- unlist(sapply(type, grep, d$tiplabid))#
+d$tipcol <- "black"#
+d$tipcol[odds] <- "blue"
+d
+namesbeast <- tips <- get_taxa_name(ggtree(beast))#
+tips <- sub("FK_6919", "BPBM16806", tips)#
+tips  <- sub("_.*$", "", tips)
+tipes
+tips
+beasttips <- data.frame("id"=tips, "treelabel"=namesbeast)#
+beastd <- merge(beasttips, d, by="id", all=T)  # check that dataframe matches tree
+tree <- beast <- rename_taxa(beast, beastd, treelabel, label) # change tip labels from the original labels to cleaned labels
+tree_names <- get_taxa_name(ggtree(tree))
+tree <- full_join(tree, d, by="label") # full tree with metadata#
+tibb <- as_tibble(tree)#
+ss <- distinct(tibb, genus, species, .keep_all=T)  # distinct species per site#
+todrop <- as_tibble(tree)$label %w/o% ss$label # drop 30 taxa at multiple sites, outgroups#
+todrop <- grep("fronti", todrop, invert=T, value=T )  # leave in all the O. frontifasciata, drop 28 taxa
+outgroups <- c("UMMZ211174", "UMMZ211181", "UMMZ219489")#
+todrop_og <- grep(paste(outgroups, collapse="|"), tree_names, value=T) 	# find index to drop - low sequence info
+treefull <- tree   # 240 tips
+tree
+tree <- treeio::drop.tip(tree, c(todrop, todrop_og))  # ingroup tree with only one sample per species - 212 tips
+write.beast(tree, file="out/beast_218_tree_asterophryinae_oreophryne.nex") #ingroup tree, 1 species per site
+get_taxa_name(ggtree(tree))
+outgroups <- c("UMMZ211174", "UMMZ211181", "UMMZ219489", "NA")
+todrop_og <- grep(paste(outgroups, collapse="|"), tree_names, value=T) 	# find index to drop - low sequence info
+treefull <- tree   # 240 tips#
+tree <- treeio::drop.tip(tree, c(todrop, todrop_og))  # ingroup tree with only one sample per species - 212 tips
+write.beast(tree, file="out/beast_218_tree_asterophryinae_oreophryne.nex") #ingroup tree, 1 species per site
+tree
+get_taxa_name(ggtree(tree))
+tree <- treeio::drop.tip(tree, c(todrop, todrop_og, "NA"))  # ingroup tree with only one sample per species - 212 tips
+write.beast(tree, file="out/beast_218_tree_asterophryinae_oreophryne.nex") #ingroup tree, 1 species per site
+write.beast(tree, file="out/beast_218_tree_asterophryinae_oreophryne.nex", translate = TRUE) #ingroup tree, 1 species per site
+write.beast(tree, file="out/beast_218_tree_asterophryinae_oreophryne.nex", translate = FALSE) #ingroup tree, 1 species per site
+namesbeast
+tdat <- tree %>% as_tibble %>% as.data.frame
+genera <- unique(d$genus) %w/o% c("Oxydactyla", "Sphenophryne", "Aphantophryne A", "Aphantophryne B", "Dyscophis", "Platypelis", "Scaphiophryne")   # 17 recognized genera
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus#
+gcol <- gc$col#
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus#
+gcol <- gc$col#
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 30), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+pdf(file="out/FullTree.pdf", height=10, width=3)#
+  print(p)#
+dev.off()
+pdf(file="out/FullTree.pdf", height=10, width=10)#
+  print(p)#
+dev.off()
+tipcol
+genera
+genera <- unique(d$genus) %w/o% c("Oxydactyla", "Sphenophryne", "Aphantophryne A", "Aphantophryne B", "Dyscophis", "Platypelis", "Scaphiophryne")   # 17 recognized genera
+genera
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus
+gc
+gcol <- gc$col
+gcol
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+names(gcol)
+names(gc)
+p <- ggtree(tree) +     # 212 taxa
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 30), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 30), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     #scale_x_continuous(limits = c(0, 30), #
+     					#breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					#labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					#labels = c(20,15,10,5,0)) #
+     					labels = abs +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					#labels = c(20,15,10,5,0)) #
+     					labels = abs +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					#labels = c(20,15,10,5,0)) #
+     					labels = abs) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+d <- read.csv("Table1_oreotype.csv")          # tree metadata spreadsheet
+d <- read.csv("Table1_oreotype.csv")          # tree metadata spreadsheet#
+#
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+# type species and sisters#
+type <- c("Oreophryne A senckenbergiana", "Oreophryne A frontifasciata")#
+odds <- unlist(sapply(type, grep, d$tiplabid))#
+d$tipcol <- "black"#
+d$tipcol[odds] <- "blue"
+# beast#
+namesbeast <- tips <- get_taxa_name(ggtree(beast))#
+tips <- sub("FK_6919", "BPBM16806", tips)#
+tips  <- sub("_.*$", "", tips)
+beasttips <- data.frame("id"=tips, "treelabel"=namesbeast)#
+beastd <- merge(beasttips, d, by="id", all=T)  # check that dataframe matches tree#
+#
+tree <- beast <- rename_taxa(beast, beastd, treelabel, label) # change tip labels from the original labels to cleaned labels#
+tree_names <- get_taxa_name(ggtree(tree))
+tree_names
+beast <- read.beast("beast_asterophryinae12242022.nex")#
+iqtree <- read.iqtree("asterophryinae_partitions.nex.timetree.nwk")#
+d <- read.csv("Table1_oreotype.csv")          # tree metadata spreadsheet
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+# type species and sisters#
+type <- c("Oreophryne A senckenbergiana", "Oreophryne A frontifasciata")#
+odds <- unlist(sapply(type, grep, d$tiplabid))#
+d$tipcol <- "black"#
+d$tipcol[odds] <- "blue"
+namesbeast <- tips <- get_taxa_name(ggtree(beast))
+namesbeast
+d
+tips <- sub("FK_6919", "BPBM16806", tips)#
+tips  <- sub("_.*$", "", tips)
+tips
+beasttips <- data.frame("id"=tips, "treelabel"=namesbeast)
+beastd <- merge(beasttips, d, by="id", all=T)  # check that dataframe matches tree
+beastd
+tree <- beast <- rename_taxa(beast, beastd, treelabel, label) # change tip labels from the original labels to cleaned labels#
+tree_names <- get_taxa_name(ggtree(tree))
+tree_names
+tree <- full_join(tree, d, by="label") # full tree with metadata
+tibb <- as_tibble(tree)
+ss <- distinct(tibb, genus, species, .keep_all=T)  # distinct species per site
+todrop <- as_tibble(tree)$label %w/o% ss$label # drop 30 taxa at multiple sites, outgroups
+todrop <- grep("fronti", todrop, invert=T, value=T )  # leave in all the O. frontifasciata, drop 28 taxa
+outgroups <- c("UMMZ211174", "UMMZ211181", "UMMZ219489")
+todrop_og <- grep(paste(outgroups, collapse="|"), tree_names, value=T) 	# find index to drop - low sequence info
+treefull <- tree   # 240 tips
+tree <- treeio::drop.tip(tree, c(todrop, todrop_og))  # ingroup tree with only one sample per species - 212 tips
+write.beast(tree, file="out/beast_218_tree_asterophryinae_oreophryne.nex", translate = FALSE) #ingroup tree, 1 species per site
+tdat <- tree %>% as_tibble %>% as.data.frame
+genera <- unique(d$genus) %w/o% c("Oxydactyla", "Sphenophryne", "Aphantophryne A", "Aphantophryne B", "Dyscophis", "Platypelis", "Scaphiophryne")   # 17 recognized genera
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus
+gcol <- gc$col
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=0.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+geom_tiplab(aes(label=gensp, color=tipcol),
+geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2,
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=0.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=0.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+ggtree(tree)
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=0.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+tdat <- tree %>% as_tibble %>% as.data.frame#
+#
+genera <- unique(d$genus) %w/o% c("Oxydactyla", "Sphenophryne", "Aphantophryne A", "Aphantophryne B", "Dyscophis", "Platypelis", "Scaphiophryne")   # 17 recognized genera#
+#
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus#
+gcol <- gc$col#
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+gensp
+beast <- read.beast("beast_asterophryinae12242022.nex")#
+iqtree <- read.iqtree("asterophryinae_partitions.nex.timetree.nwk")#
+d <- read.csv("Table1_oreotype.csv")          # tree metadata spreadsheet
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+type <- c("Oreophryne A senckenbergiana", "Oreophryne A frontifasciata")#
+odds <- unlist(sapply(type, grep, d$tiplabid))#
+d$tipcol <- "black"#
+d$tipcol[odds] <- "blue"
+namesbeast <- tips <- get_taxa_name(ggtree(beast))#
+tips <- sub("FK_6919", "BPBM16806", tips)#
+tips  <- sub("_.*$", "", tips)
+beasttips <- data.frame("id"=tips, "treelabel"=namesbeast)#
+beastd <- merge(beasttips, d, by="id", all=T)  # check that dataframe matches tree
+beastd
+tree <- beast <- rename_taxa(beast, beastd, treelabel, label) # change tip labels from the original labels to cleaned labels#
+tree_names <- get_taxa_name(ggtree(tree))
+tree_names
+tree <- full_join(tree, d, by="label") # full tree with metadata#
+tibb <- as_tibble(tree)#
+ss <- distinct(tibb, genus, species, .keep_all=T)  # distinct species per site
+ss
+todrop <- as_tibble(tree)$label %w/o% ss$label # drop 30 taxa at multiple sites, outgroups#
+todrop <- grep("fronti", todrop, invert=T, value=T )  # leave in all the O. frontifasciata, drop 28 taxa
+outgroups <- c("UMMZ211174", "UMMZ211181", "UMMZ219489")#
+todrop_og <- grep(paste(outgroups, collapse="|"), tree_names, value=T) 	# find index to drop - low sequence info
+treefull <- tree   # 240 tips#
+tree <- treeio::drop.tip(tree, c(todrop, todrop_og))  # ingroup tree with only one sample per species - 212 tips
+tree
+write.beast(tree, file="out/beast_212_tree_asterophryinae_oreophryne.nex", translate = FALSE) #ingroup tree, 1 species per site
+write.beast(tree, file="out/beast_211_tree_asterophryinae_oreophryne.nex", translate = FALSE) #ingroup tree, 1 species per site
+tdat <- tree %>% as_tibble %>% as.data.frame
+genera <- unique(d$genus) %w/o% c("Oxydactyla", "Sphenophryne", "Aphantophryne A", "Aphantophryne B", "Dyscophis", "Platypelis", "Scaphiophryne")   # 17 recognized genera
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus#
+gcol <- gc$col
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus
+gcol <- gc$col
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+genera
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus
+gcol <- gc$col
+gcol
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+names(gcol)
+gensp
+d$gensp <- paste(d$genus, d$species, sep=" ")
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+gensp
+d$gensp
+tipcol
+tree(tipcol)
+tipcol(tree)
+?tipcol
+require(treeio)#
+require(ggtree)#
+require(dplyr)#
+require(phytools)#
+require(ggplot2)#
+require(ape)#
+source("clean_functions.R") # contains no_()
+beast <- read.beast("beast_asterophryinae12242022.nex")#
+iqtree <- read.iqtree("asterophryinae_partitions.nex.timetree.nwk")#
+d <- read.csv("Table1_oreotype.csv")          # tree metadata spreadsheet
+d$gensp <- paste(d$genus, d$species, sep=" ")#
+d$tiplabid <- paste(d$gensp, d$id, sep=" ")
+type <- c("Oreophryne A senckenbergiana", "Oreophryne A frontifasciata")#
+odds <- unlist(sapply(type, grep, d$tiplabid))#
+d$tipcol <- "black"#
+d$tipcol[odds] <- "blue"
+namesiqtree <- tips <- get_taxa_name(ggtree(iqtree)) #
+#tips <- sub("FK_6919", "BPBM16806", tips)#
+tips <- sub("_.*$", "", tips)
+iqtips <- data.frame("id"=tips, "treelabel"=namesiqtree)#
+iqd <- merge(iqtips, d, by="id", all=T)  # check that dataframe matches tree
+iqd
+iqtree <- rename_taxa(iqtree, iqd, treelabel, label) # change tip labels from the original labels to cleaned labels
+namesbeast <- tips <- get_taxa_name(ggtree(beast))#
+tips <- sub("FK_6919", "BPBM16806", tips)#
+tips  <- sub("_.*$", "", tips)
+beasttips <- data.frame("id"=tips, "treelabel"=namesbeast)#
+beastd <- merge(beasttips, d, by="id", all=T)  # check that dataframe matches tree
+beastd
+iqd
+tree <- beast <- rename_taxa(beast, beastd, treelabel, label) # change tip labels from the original labels to cleaned labels
+tree_names <- get_taxa_name(ggtree(tree))
+tree <- full_join(tree, d, by="label") # full tree with metadata
+tree
+tibb <- as_tibble(tree)
+ss <- distinct(tibb, genus, species, .keep_all=T)  # distinct species per site
+todrop <- as_tibble(tree)$label %w/o% ss$label # drop 30 taxa at multiple sites, outgroups
+todrop <- grep("fronti", todrop, invert=T, value=T )  # leave in all the O. frontifasciata, drop 28 taxa
+outgroups <- c("UMMZ211174", "UMMZ211181", "UMMZ219489")
+todrop_og <- grep(paste(outgroups, collapse="|"), tree_names, value=T) 	# find index to drop - low sequence info
+treefull <- tree   # 240 tips
+tree <- treeio::drop.tip(tree, c(todrop, todrop_og))  # ingroup tree with only one sample per species - 212 tips
+tree
+write.beast(tree, file="out/beast_211_tree_asterophryinae_oreophryne.nex", translate = FALSE) #ingroup tree, 1 species per site
+tdat <- tree %>% as_tibble %>% as.data.frame
+tdat
+genera <- unique(d$genus) %w/o% c("Oxydactyla", "Sphenophryne", "Aphantophryne A", "Aphantophryne B", "Dyscophis", "Platypelis", "Scaphiophryne")   # 17 recognized genera
+gc <- read.csv("gencolorABC.csv")    ## color code highlight boxes by genus
+gcol <- gc$col
+names(gcol) <- gc$gen         ## gcol holds the colors=values for the genera=names
+names(gcol)
+p <- ggtree(tree) +     # 212 taxa#
+	 geom_tiplab(aes(label=gensp, color=tipcol), #
+	 					size=1.2, #
+	 					offset=.05, #
+	 					fontface='italic' ) + #
+	 scale_color_manual(values = c("black", "blue")) +#
+     scale_x_continuous(limits = c(0, 20), #
+     					breaks=c(-0.71, 4.71, 9.71, 14.71, 19.71),  #
+     					labels = c(20,15,10,5,0)) +#
+     coord_cartesian(clip="off") + #
+	 theme_tree2(legend.position="none")
+p
+oddballs <- c("Paedophryne dekot", "Aphantophryne", "Copiula tyleri", "Oreophryne A graminis")
+tipvec <- grep(paste(c(nospaces(oddballs),"Copiula_sp.7"), collapse="|"), get_taxa_name(ggtree(tree)), value=T, invert=T)
+gennode <- sapply(nospaces(genera), function(x)   # for each set of tips per genus, find MRCA#
+                            MRCA(tree,   #
+                              grep(x, #
+								tipvec,#
+								value=T)#
+							)#
+		         )
+justoreo <- grep("Oreophryne", names(gennode), value=T )
+qo <- p + geom_hilight(node=gennode[justoreo], fill=gcol[no_(names(gennode[justoreo]))], alpha=0.25)
+qo
+gennode <- sapply(nospaces(genera), function(x)   # for each set of tips per genus, find MRCA
+MRCA(tree,   #
+                              grep(x, #
+								tipvec,#
+								value=T)#
+							)#
+		         )
+beasttips
+beastd

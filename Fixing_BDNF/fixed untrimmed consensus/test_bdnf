@@ -1,0 +1,79 @@
+#NEXUS
+[written Mon Aug 15 15:36:32 HST 2022 by Mesquite  version 3.70 (build 940) at dhcp-168-105-85-175.wireless.manoa.hawaii.edu/168.105.85.175]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=193;
+	TAXLABELS
+		taxon_1 taxon_2 taxon_3 taxon_4 taxon_5 taxon_6 taxon_7 taxon_8 taxon_9 taxon_10 taxon_11 taxon_12 taxon_13 taxon_14 taxon_15 taxon_16 taxon_17 taxon_18 taxon_19 taxon_20 taxon_21 taxon_22 taxon_23 taxon_24 taxon_25 taxon_26 taxon_27 taxon_28 taxon_29 taxon_30 taxon_31 taxon_32 taxon_33 taxon_34 taxon_35 taxon_36 taxon_37 taxon_38 taxon_39 taxon_40 taxon_41 taxon_42 taxon_43 taxon_44 taxon_45 taxon_46 taxon_47 taxon_48 taxon_49 taxon_50 taxon_51 taxon_52 taxon_53 taxon_54 taxon_55 taxon_56 taxon_57 taxon_58 taxon_59 taxon_60 taxon_61 taxon_62 taxon_63 taxon_64 taxon_65 taxon_66 taxon_67 taxon_68 taxon_69 taxon_70 taxon_71 taxon_72 taxon_73 taxon_74 taxon_75 taxon_76 taxon_77 taxon_78 taxon_79 taxon_80 taxon_81 taxon_82 taxon_83 taxon_84 taxon_85 taxon_86 taxon_87 taxon_88 taxon_89 taxon_90 taxon_91 taxon_92 taxon_93 taxon_94 taxon_95 taxon_96 taxon_97 taxon_98 taxon_99 taxon_100 taxon_101 taxon_102 taxon_103 taxon_104 taxon_105 taxon_106 taxon_107 taxon_108 taxon_109 taxon_110 taxon_111 taxon_112 taxon_113 taxon_114 taxon_115 taxon_116 taxon_117 taxon_118 taxon_119 taxon_120 taxon_121 taxon_122 taxon_123 taxon_124 taxon_125 taxon_126 taxon_127 taxon_128 taxon_129 taxon_130 taxon_131 taxon_132 taxon_133 taxon_134 taxon_135 taxon_136 taxon_137 taxon_138 taxon_139 taxon_140 taxon_141 taxon_142 taxon_143 taxon_144 taxon_145 taxon_146 taxon_147 taxon_148 taxon_149 taxon_150 taxon_151 taxon_152 taxon_153 taxon_154 taxon_155 taxon_156 taxon_157 taxon_158 taxon_159 taxon_160 taxon_161 taxon_162 taxon_163 taxon_164 taxon_165 taxon_166 taxon_167 taxon_168 taxon_169 taxon_170 taxon_171 taxon_172 taxon_173 taxon_174 taxon_175 taxon_176 taxon_177 taxon_178 taxon_179 taxon_180 taxon_181 taxon_182 taxon_183 taxon_184 taxon_185 taxon_186 taxon_187 taxon_188 taxon_189 taxon_190 taxon_191 taxon_192 taxon_193 
+	;
+
+END;
+
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1660613792499;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 9011274945690470961;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 172;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 700 500;
+			setLocation 8 25;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #9011274945690470961 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #9011274945690470961;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 528 428;
+					setLocation 8 25;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

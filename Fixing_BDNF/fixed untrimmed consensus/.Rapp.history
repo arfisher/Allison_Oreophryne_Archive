@@ -1,0 +1,9 @@
+list.files("fixed untrimmed consensus")
+files <- list.files("fixed untrimmed consensus")
+files
+?read.table
+setwd("fixed untrimmed fixed untrimmed consensus/")
+setwd("fixed untrimmed consensus/")
+scan(files[1])
+files[1]
+read.table(files[1])

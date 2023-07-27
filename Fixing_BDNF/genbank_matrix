@@ -1,0 +1,79 @@
+#NEXUS
+[written Mon Aug 15 16:29:39 HST 2022 by Mesquite  version 3.70 (build 940) at dhcp-168-105-85-175.wireless.manoa.hawaii.edu/168.105.85.175]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=3;
+	TAXLABELS
+		taxon_1 taxon_2 taxon_3 
+	;
+
+END;
+
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1660616979627;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 638003607288675974;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 172;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 700 500;
+			setLocation 8 25;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #638003607288675974 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #638003607288675974;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 528 428;
+					setLocation 8 25;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+
