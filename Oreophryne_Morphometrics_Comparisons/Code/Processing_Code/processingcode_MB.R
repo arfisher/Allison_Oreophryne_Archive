@@ -50,12 +50,49 @@ callvars <- c("honk", "whinny", "rattle", "peeping", "other")
 scores$pectoral_type <- collapsevars( scores[pecvars] )
 scores$call_type <- collapsevars( scores[callvars] )
 
-scores <- scores[names(scores) %w/o% c(pecvars, callvars)]
+#scores <- scores[names(scores) %w/o% c(pecvars, callvars)]
 
-scores <- scores %>% mutate(toe_length = if_else( toe_length==3, TRUE, FALSE )) %>%
+scores <- scores %>% 
+				mutate(toe_length = if_else( toe_length==3, TRUE, FALSE )) %>%
 				mutate(pupil_horizontal = if_else( pupil_horizontal==3, TRUE, FALSE )) %>%
 				mutate(teeth = if_else( teeth==3, TRUE, FALSE )) %>%
-				mutate(two_palate_folds = if_else( two_palate_folds==3, TRUE, FALSE ))
+				mutate(cartilaginous = if_else( cartilaginous ==3, TRUE, FALSE )) %>%
+				mutate(ligamentous = if_else( ligamentous ==3, TRUE, FALSE )) %>%
+				mutate(honk = if_else( honk ==3, TRUE, FALSE )) %>%
+				mutate(whinny = if_else( whinny ==3, TRUE, FALSE )) %>%
+				mutate(rattle = if_else( rattle ==3, TRUE, FALSE )) %>%
+				mutate(peeping = if_else( peeping ==3, TRUE, FALSE )) %>%
+				mutate(other = if_else( other ==3, TRUE, FALSE ))
+
+# summarize by genus and species
+mscore <- scores %>% group_by(genus, species) %>% 
+		summarise(across(svl:other, ~ mean(.x, na.rm = TRUE)))
+
+# summarize by genus
+gscore <- mscore %>% group_by(genus) %>% 
+		summarise(across(svl:other, ~ mean(.x, na.rm = TRUE)))
+
+# plot calls, organize data by call type
+
+# likert plot
+calls <- gscore[c("genus", callvars)]
+likert(species ~.|genus, layout=c(1,2), calls, positive.order = TRUE, 
+       scales=list(y=list(relation="free")),
+       strip.left=strip.custom(bg="gray97"),
+       strip=FALSE,
+       as.percent = "noRightAxis", ReferenceZero = 2.5,
+       main = 'Call types', 
+       ylab = "Genus", xlab = "Percentage",
+       sub= list("Angry Level Rating",x=unit(.6, "npc")))
+
+# stacked bar plot
+gcall <- mscore %>% group_by(genus) %>% 
+		summarise(across(honk:other, ~ sum(.x, na.rm = TRUE))) %>%
+		pivot_longer(-genus, names_to="call_type", values_to="n")
+
+ggplot(gcall, aes(fill=call_type, y=n, x=genus)) + 
+    geom_bar(position="fill", stat="identity")
+
 
 # view data dictionary
 dictionary <- read.csv(paste(data_path, "datadictionary.csv", sep=""))
