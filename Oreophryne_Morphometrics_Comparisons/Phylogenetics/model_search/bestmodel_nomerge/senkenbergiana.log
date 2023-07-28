@@ -1,0 +1,887 @@
+IQ-TREE multicore version 2.2.2.6 COVID-edition for Mac OS X 64-bit built May 27 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    Marguerites-MacBook-Pro.local (AVX2, FMA3, 16 GB RAM)
+Command: iqtree2 -s ../../../mesquite_alignment/oreophryne_senkenbergiana_alignment_20230715.nex -p ../input/asterophryinae_15partitions.nex -pre senkenbergiana -m TEST -B 1000 -o UMMZ219489_Scaphiophryne_marmorata --date ../input/asterophryinae_dates.txt --date-tip 0 -mset JC,F81,K80,HKY,TN,TNe,TPM2,TPM2u,TPM3,TPM3u,TIM,TIMe,TIM2,TIM2e,TIM3,TIM3e,TVMe,TVM,SYM,GTR
+Seed:    119510 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Jul 15 20:43:44 2023
+Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading partition model file ../input/asterophryinae_15partitions.nex ...
+Reading alignment file ../../../mesquite_alignment/oreophryne_senkenbergiana_alignment_20230715.nex ... Nexus format detected
+Skipping unknown block (mrbayes)...
+Alignment has 238 sequences with 2475 columns, 1392 distinct patterns
+951 parsimony-informative, 195 singleton sites, 1329 constant sites
+                                                 Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00147915 secs using 90.73% CPU
+   1  ABTC116941_Oreophryne_A_graminis                  21.21%    passed      9.49%
+   2  BPBM47733_Choerophryne_darlingtoni_complex_sp_1    0.28%    passed     96.39%
+   3  BPBM47780_Cophixalus_cf__cryptotympanum            2.14%    passed     91.94%
+   4  BPBM47792_Hylophorbus_cf__rufescens_14             0.24%    passed     73.63%
+   5  BPBM47804_Cophixalus_darlingtoni                   5.41%    passed     97.92%
+   6  BPBM31882_Paedophryne_swiftorum_complex_sp_1      22.42%    passed     19.09%
+   7  BPBM47713_Paedophryne_amauensis                    0.08%    passed     92.75%
+   8  BPBM47786_Callulops_sp_2                           3.68%    passed     93.51%
+   9  UMMZ242263_Cophixalus_variabilis_complex_sp_1      1.25%    passed     72.28%
+  10  UMMZ242338_Liophryne_aff__dentata_1                0.00%    passed     17.72%
+  11  UMMZ242317_Hylophorbus_cf__rufescens_1             0.00%    passed     95.87%
+  12  UMMZ242212_Austrochaperina_C_aff__palmipes_1       1.70%    passed     77.46%
+  13  UMMZ242361_Mantophryne_cf__lateralis_1             0.04%    passed     85.69%
+  14  UMMZ242309_Genyophryne_aff__thomsoni_1             0.44%    passed     87.12%
+  15  UMMZ242349_Cophixalus_verrucosus_complex_sp_1      1.41%    passed     98.48%
+  16  UMMZ242404_Oreophryne_A_sp_8                       0.00%    passed     13.74%
+  17  UMMZ242232_Cophixalus_desticans_complex_sp_1       0.36%    passed     45.97%
+  18  UMMZ242226_Callulops_doriae_complex_sp_1           0.20%    passed     66.28%
+  19  FK16913_Paedophryne_titan                          0.48%    passed     19.37%
+  20  UMMZ242398_Oreophryne_B_penelopia                  0.12%    passed     95.00%
+  21  BPBM47888_Hylophorbus_cf__rufescens_13             4.24%    passed     97.98%
+  22  JAM11383_Oreophryne_B_sp_5                         1.82%    passed     81.76%
+  23  BPBM35843_Cophixalus_cf__pipilans_1                0.20%    passed     23.91%
+  24  BPBM40083_Copiula_sp_1                             1.29%    passed     78.74%
+  25  BPBM20571_Oreophryne_B_sp_2                        0.20%    passed     74.02%
+  26  BPBM22664_Austrochaperina_A_sp_1                   1.58%    passed     79.81%
+  27  BPBM20396_Mantophryne_cf__lateralis_1              0.24%    passed     93.87%
+  28  BPBM48036_Paedophryne_sp_2                        20.00%    passed     26.87%
+  29  BPBM35561_Choerophryne_gudrunae                    1.41%    passed     97.22%
+  30  BPBM40135_Mantophryne_insignis                     0.12%    passed     84.23%
+  31  BPBM39638_Hylophorbus_myopicus                     1.49%    passed     99.99%
+  32  BPBM20572_Oreophryne_B_sp_3                        5.17%    passed     94.71%
+  33  BPBM13110_Asterophrys_slateri                      0.93%    passed     34.03%
+  34  BPBM33669_Callulops_wilhelmanus                    0.20%    passed     97.12%
+  35  BPBM16554_Oreophryne_A_philosylleptoris            0.20%    passed     15.02%
+  36  BPBM20262_Copiula_sp_2                             5.86%    passed     87.97%
+  37  BPBM39000_Oreophryne_B_sp_1                        0.20%    passed     83.84%
+  38  BPBM34677_Oreophryne_A_cameroni                    5.74%    passed     47.37%
+  39  BPBM38990_Oreophryne_A_sp_2                        0.81%    passed     25.19%
+  40  BPBM16181_Hylophorbus_cf__rufescens_2              0.24%    passed     96.66%
+  41  BPBM39048_Cophixalus_sp_3                          0.69%    passed     49.15%
+  42  BPBM34688_Oreophryne_A_biroi                       0.16%    passed     28.22%
+  43  BPBM38939_Copiula_sp_7                            20.04%    passed     38.13%
+  44  BPBM22675_Choerophryne_longirostris                0.12%    passed     95.91%
+  45  BPBM18450_Hylophorbus_cf__rufescens_6              0.20%    passed     83.51%
+  46  BPBM22504_Hylophorbus_cf__rufescens_12             1.45%    passed     82.85%
+  47  BPBM39357_Oreophryne_B_sp_6                        0.32%    passed     87.00%
+  48  BPBM20522_Oreophryne_A_aurora                      0.28%    passed     94.35%
+  49  BPBM40145_Oreophryne_A_sp_6                        2.46%    passed     30.64%
+  50  BPBM39569_Hylophorbus_cf__rufescens_9              0.04%    passed     98.98%
+  51  BPBM22780_Mantophryne_cf__lateralis_3              1.25%    passed     99.39%
+  52  BPBM39007_Copiula_sp_3                            20.97%    passed     20.63%
+  53  BPBM19265_Mantophryne_cf__lateralis_4              1.29%    passed     99.09%
+  54  BPBM33763_Oreophryne_A_anamiatoi                   0.12%    passed     59.16%
+  55  BPBM22692_Cophixalus_balbus                        1.45%    passed     98.68%
+  56  BPBM39244_Oreophryne_A_sp_3                        1.58%    passed     45.33%
+  57  BPBM22689_Oreophryne_A_cf__cameroni                1.82%    passed     47.78%
+  58  BPBM18430_Cophixalus_albolineatus                  1.21%    passed     68.02%
+  59  BPBM38988_Oreophryne_B_sp_4                        2.34%    passed     84.32%
+  60  BPBM33707_Cophixalus_caverniphilus                 1.98%    passed     83.24%
+  61  BPBM39991_Choerophryne_bryonopsis                  1.70%    passed     58.86%
+  62  BPBM39631_Hylophorbus_cf__rufescens_7              0.24%    passed     98.56%
+  63  BPBM19320_Cophixalus_nexipus                       1.70%    passed     88.25%
+  64  BPBM37122_Callulops_sp_1                           0.04%    passed     91.61%
+  65  BPBM34724_Hylophorbus_atrifasciatus                0.04%    passed     90.41%
+  66  BPBM18392_Cophixalus_cheesmanae_complex_sp_1       3.07%    passed     75.06%
+  67  BPBM39929_Liophryne_miniafia                       0.00%    passed     96.77%
+  68  BPBM35866_Hylophorbus_cf__rufescens_15             0.04%    passed     95.77%
+  69  BPBM17959_Cophixalus_sp_4                          0.16%    passed     93.32%
+  70  BPBM40000_Austrochaperina_A_sp_2                   0.04%    passed     80.51%
+  71  BPBM19277_Cophixalus_iovaorum                      0.16%    passed     86.69%
+  72  BPBM19338_Hylophorbus_cf__rufescens_10             0.20%    passed     99.66%
+  73  BPBM37232_Hylophorbus_cf__rufescens_3              0.28%    passed     96.48%
+  74  BPBM38914_Barygenys_maculata                       0.12%    passed     12.45%
+  75  BPBM19371_Oreophryne_A_sp_4                        0.00%    passed     76.02%
+  76  BPBM33749_Hylophorbus_richardsi                    0.08%    passed     85.53%
+  77  BPBM18429_Cophixalus_albolineatus                  2.55%    passed     84.84%
+  78  BPBM33664_Choerophryne_darlingtoni_complex_sp_2    0.81%    passed     98.94%
+  79  BPBM34679_Choerophryne_proboscidea                 0.57%    passed     92.20%
+  80  BPBM20538_Oreophryne_B_sp_3                        0.85%    passed     99.65%
+  81  BPBM19314_Cophixalus_ateles                        2.18%    passed     95.89%
+  82  BPBM38992_Oreophryne_A_sp_2                        1.98%    passed     32.13%
+  83  BPBM39510_Oreophryne_B_phoebe                      1.54%    passed     55.20%
+  84  BPBM37718_Cophixalus_clapporum                    20.97%    passed     29.32%
+  85  BPBM39344_Oreophryne_B_sp_4                        1.25%    passed     47.44%
+  86  BPBM38904_Barygenys_apodasta                       1.62%    passed     59.81%
+  87  BPBM20126_Barygenys_aff__exsul_1                   1.78%    passed     37.67%
+  88  BPBM15814_Cophixalus_variabilis_complex_sp_2       5.17%    passed     97.46%
+  89  BPBM15708_Cophixalus_desticans_complex_sp_2        0.16%    passed     63.00%
+  90  BPBM33674_Oreophryne_A_notata                      2.79%    failed      2.68%
+  91  BPBM35692_Hylophorbus_cf__proekes                  1.78%    passed     61.41%
+  92  BPBM20141_Callulops_doriae_complex_sp_2            1.78%    passed     44.51%
+  93  BPBM17048_Hylophorbus_cf__rufescens_11             1.82%    passed     97.22%
+  94  BPBM18509_Oreophryne_A_lemur                       1.41%    passed     85.40%
+  95  BPBM33780_Xenorhina_parkerorum                     2.75%    passed     65.49%
+  96  BPBM15259_Barygenys_resima                         1.94%    passed     46.93%
+  97  BPBM20501_Oreophryne_B_meliades                    0.32%    passed     85.05%
+  98  BPBM35986_Hylophorbus_cf__rufescens_17             2.02%    passed     95.52%
+  99  BPBM27491_Cophixalus_verrucosus_complex_sp_3       1.13%    passed     84.42%
+ 100  BPBM15775_Oreophryne_B_equus                       1.45%    passed     74.13%
+ 101  BPBM15410_Mantophryne_cf__lateralis_2              1.25%    passed     97.77%
+ 102  BPBM39366_Oreophryne_A_sp_5                        1.86%    passed     85.75%
+ 103  BPBM37753_Paedophryne_dekot                        1.86%    passed     98.22%
+ 104  BPBM15707_Cophixalus_sp_5                          0.08%    passed     91.43%
+ 105  BPBM35735_Austrochaperina_B_sp_3                   0.00%    passed     96.95%
+ 106  TNHC58922_Oreophryne_B_variabilis                  3.19%    passed     63.43%
+ 107  CMNH1366_Oreophryne_A_anulata                      2.30%    passed     10.03%
+ 108  KU321316_Oreophryne_A_nana                         1.78%    passed     12.35%
+ 109  BPBM18605_Copiula_fistulans                        0.36%    passed     87.45%
+ 110  BPBM41683_Aphantophryne_B_pansa_3                  3.03%    passed     96.12%
+ 111  BPBM41681_Aphantophryne_B_pansa_3                  4.57%    passed     99.63%
+ 112  BPBM41685_Aphantophryne_B_pansa_3                  1.37%    passed     99.55%
+ 113  BPBM41682_Aphantophryne_B_pansa_3                  1.37%    passed     97.45%
+ 114  BPBM17084_Copiula_oxyrhina                         1.25%    passed     92.15%
+ 115  BPBM13862_Austrochaperina_B_macrorhyncha           0.85%    passed     96.97%
+ 116  BPBM18351_Choerophryne_gunnari                     2.26%    passed     53.39%
+ 117  BPBM20357_Genyophryne_thomsoni                     1.94%    passed     66.49%
+ 118  BPBM22740_Hylophorbus_cf__rufescens_16             1.13%    passed     95.84%
+ 119  BPBM20369_Hylophorbus_extimus                      0.85%    passed     97.37%
+ 120  BPBM22761_Hylophorbus_proekes                      0.85%    passed     97.56%
+ 121  BPBM15373_Liophryne_aff__dentata_2                 1.37%    passed     39.98%
+ 122  BPBM22754_Liophryne_schlaginhaufeni                1.13%    passed     51.53%
+ 123  BPBM20142_Mantophryne_louisiadensis                3.39%    passed     84.92%
+ 124  BPBM22511_Oreophryne_A_brachypus                   1.58%    passed     44.45%
+ 125  BPBM18510_Oreophryne_A_cf__geislerorum_1           1.17%    passed     28.53%
+ 126  BPBM17847_Choerophryne_sanguinopictus              1.66%    passed     98.65%
+ 127  BPBM16217_Oreophryne_A_inornata                    0.93%    passed     66.68%
+ 128  BPBM16546_Oreophryne_B_insulana                    2.63%    passed     77.67%
+ 129  BPBM22539_Oreophryne_A_loriae                      1.41%    passed     71.57%
+ 130  BPBM17890_Oxydactyla_crassa                        1.21%    passed     76.18%
+ 131  BPBM31477_Mantophryne_menziesi                     0.89%    passed     97.67%
+ 132  BPBM22793_Sphenophryne_cornuta                     3.64%    passed     60.47%
+ 133  BPBM22797_Xenorhina_arboricola                     0.89%    failed      3.83%
+ 134  BPBM28179_Xenorhina_mehelyi                        0.89%    passed     16.60%
+ 135  BPBM14060_Xenorhina_ocellata                       2.46%    passed     36.90%
+ 136  BPBM22795_Xenorhina_tumulus                        0.81%    passed      6.46%
+ 137  BPBM28153_Asterophrys_leucopus                     0.89%    passed     61.58%
+ 138  BPBM22649_Choerophryne_brunhildae                  0.97%    passed     91.02%
+ 139  BPBM18317_Choerophryne_exclamitans                 1.54%    passed     91.39%
+ 140  BPBM28204_Asterophrys_turpicola                    0.97%    passed     58.88%
+ 141  BPBM22665_Austrochaperina_B_basipalmata            1.62%    passed     71.34%
+ 142  BPBM22656_Austrochaperina_B_blumi                  1.29%    passed     90.13%
+ 143  BPBM22708_Copiula_tyleri                           0.04%    passed     73.74%
+ 144  BPBM22481_Austrochaperina_A_novaebritanniae        1.66%    passed     85.22%
+ 145  BPBM20112_Austrochaperina_A_yelaensis              3.84%    passed     71.94%
+ 146  BPBM15234_Austrochaperina_C_aff__palmipes_3        0.12%    passed     96.64%
+ 147  BPBM25756_Barygenys_atra                           0.85%    passed     48.75%
+ 148  BPBM25760_Barygenys_sp                             0.04%    passed     99.75%
+ 149  BPBM18504_Callulops_personatus                     0.89%    passed     99.29%
+ 150  BPBM13155_Callulops_eremnosphax                    1.62%    passed     91.57%
+ 151  BPBM20215_Cophixalus_cupricarenus                  2.51%    passed     94.69%
+ 152  BPBM20197_Cophixalus_melanops                      2.34%    passed     67.57%
+ 153  BPBM15665_Copiula_minor                            1.13%    passed     63.93%
+ 154  BPBM20287_Copiula_sp_6                            22.38%    passed     16.56%
+ 155  BPBM17827_Copiula_sp_4                             1.13%    passed     88.92%
+ 156  BPBM18388_Austrochaperina_A_parkeri                0.85%    passed     88.55%
+ 157  BPBM15355_Hylophorbus_cf__rufescens_4              1.13%    passed     85.74%
+ 158  BPBM18033_Hylophorbus_cf__rufescens_8              1.05%    passed     96.56%
+ 159  BPBM18441_Hylophorbus_cf__rufescens_12             1.45%    passed     82.19%
+ 160  BPBM18315_Liophryne_allisoni                       0.85%    passed     57.01%
+ 161  BPBM19360_Liophryne_magnitympanum                  1.29%    passed     64.58%
+ 162  BPBM20397_Mantophryne_axanthogaster                0.89%    passed     99.84%
+ 163  BPBM22784_Oreophryne_A_parkeri                    21.70%    passed     21.38%
+ 164  BPBM18128_Oreophryne_B_picticrus                   1.90%    passed     63.85%
+ 165  BPBM18002_Oreophryne_A_sp_7                        1.90%    passed     69.61%
+ 166  BPBM17980_Oreophryne_B_matawan                     6.95%    passed     80.30%
+ 167  BPBM22668_Austrochaperina_B_septentrionalis        1.86%    passed     64.22%
+ 168  BPBM22789_Oreophryne_A_parkopanorum                1.17%    passed     14.72%
+ 169  BPBM21474_Xenorhina_adisca                         1.09%    passed     36.93%
+ 170  BPBM22685_Choerophryne_rostellifer                 0.12%    passed     87.97%
+ 171  UMMZ211174_Dyscophis_antongilli                    2.18%    passed     83.76%
+ 172  UMMZ211181_Platypelis_grandis                      2.42%    passed     70.14%
+ 173  UMMZ219489_Scaphiophryne_marmorata                 0.08%    passed     77.92%
+ 174  BPBM20128_Barygenys_exsul                          0.89%    passed      8.09%
+ 175  ZMB74609_Asterophrys_senglaubi                     1.37%    passed     48.96%
+ 176  ZMB70535_Asterophrys_eurydactylus                  1.29%    passed     19.10%
+ 177  ZMB70187_Asterophrys_cf__marani                    1.58%    passed     20.40%
+ 178  ZMB63882_Asterophrys_marani                        2.63%    passed     41.06%
+ 179  ZMB70185_Asterophrys_cf__marani                    1.54%    passed     20.67%
+ 180  FK15527_Paedophryne_verrucosa                      1.49%    passed     23.66%
+ 181  BPBM39156_Oreophryne_A_sp_1                        0.81%    passed     33.73%
+ 182  BPBM19236_Callulops_bicolor                        1.54%    passed     56.96%
+ 183  BPBM35836_Callulops_microtis                       0.93%    passed     88.39%
+ 184  BPBM34741_Xenorhina_obesa                          0.85%    passed     33.82%
+ 185  BPBM20532_Oreophryne_B_sp_3                        0.89%    passed     99.79%
+ 186  BPBM15232_Austrochaperina_C_aff__palmipes_3        0.89%    passed     85.53%
+ 187  BPBM20469_Oreophryne_B_ezra                        4.16%    passed     43.31%
+ 188  BPBM33637_Choerophryne_murrita                     0.97%    passed     98.62%
+ 189  BPBM40143_Oreophryne_B_brunnea                     0.04%    passed     46.36%
+ 190  BPBM18097_Cophixalus_timidus                       1.29%    passed     86.69%
+ 191  BPBM20440_Oreophryne_B_meliades                    0.32%    passed     87.93%
+ 192  BPBM34697_Xenorhina_oxycephala                     0.00%    passed     29.13%
+ 193  BPBM16806_Callulops_robustus                       0.04%    passed     91.66%
+ 194  MB233_Cophixalus_sp_1                              2.71%    passed     72.19%
+ 195  MB291_Paedophryne_sp_1                             3.64%    passed     82.61%
+ 196  MB294_Hylophorbus_cf__rufescens_12                 0.04%    passed     87.89%
+ 197  MB300_Choerophryne_gunnari                         0.12%    passed     45.73%
+ 198  MB302_Cophixalus_sp_2                              0.00%    passed     54.44%
+ 199  MB309_Copiula_sp_5                                 2.51%    passed     68.84%
+ 200  MB327_Xenorhina_sp_1                              19.64%    passed     12.95%
+ 201  MB331_Mantophryne_cf__lateralis_4                  0.04%    passed     89.06%
+ 202  MB342_Oreophryne_A_loriae                          1.25%    passed     65.09%
+ 203  MB463_Choerophryne_sp_2                            0.44%    passed     84.50%
+ 204  MB466_Choerophryne_sp_1                            0.00%    passed     99.96%
+ 205  MB470_Cophixalus_cheesmanae_complex_sp_2           1.25%    passed     38.77%
+ 206  MB472_Choerophryne_sp_4                            0.00%    passed     58.19%
+ 207  MB475_Austrochaperina_C_aff__palmipes_4            0.00%    passed     98.68%
+ 208  MB479_Mantophryne_cf__lateralis_5                  2.91%    passed     97.36%
+ 209  MB482_Cophixalus_linnaeus                          0.24%    passed     86.63%
+ 210  MB483_Hylophorbus_cf__rufescens_5                  0.04%    passed     83.92%
+ 211  MB484_Oreophryne_A_cf__geislerorum_2               0.73%    passed     21.18%
+ 212  MB486_Paedophryne_swiftorum_complex_sp_2           6.51%    passed     30.13%
+ 213  MB508_Callulops_doriae_complex_sp_1                1.17%    passed     41.34%
+ 214  MB518_Mantophryne_cf__lateralis_1                  3.23%    passed     95.40%
+ 215  MB539_Austrochaperina_C_aff__palmipes_2            1.17%    passed     73.56%
+ 216  MB556_Hylophorbus_cf__rufescens_1                  1.25%    passed     94.70%
+ 217  MB571_Cophixalus_variabilis_complex_sp_3           0.00%    passed     93.22%
+ 218  MB583_Cophixalus_verrucosus_complex_sp_2           1.17%    passed     97.95%
+ 219  MB593_Liophryne_aff__dentata_3                     1.25%    passed     47.40%
+ 220  MB617_Cophixalus_desticans_complex_sp_1            0.00%    passed     44.91%
+ 221  MB626_Genyophryne_aff__thomsoni_2                  1.41%    passed     96.97%
+ 222  MB627_Oreophryne_B_penelopia                       1.33%    passed     81.05%
+ 223  BPBM31979_Hylophorbus_cf__rufescens_5              3.27%    passed     84.93%
+ 224  BPBM26182_Cophixalus_tomaiodactylus                1.29%    passed     98.96%
+ 225  BPBM23740_Callulops_personatus                     1.09%    passed     99.16%
+ 226  BPBM25837_Choerophryne_sp_3                        1.45%    passed     97.76%
+ 227  BPBM26194_Cophixalus_phaeobalius                   1.41%    passed     98.49%
+ 228  BPBM25754_Choerophryne_sp_4                        1.41%    passed     55.16%
+ 229  BPBM31337_Cophixalus_linnaeus                      1.37%    passed     86.55%
+ 230  BPBM31847_Cophixalus_cf__pipilans_2                0.28%    passed     71.83%
+ 231  BPBM31853_Genyophryne_aff__thomsoni_3              2.83%    passed     43.90%
+ 232  BPBM31808_Choerophryne_sp_1                        1.45%    passed     97.99%
+ 233  BPBM35367_Choerophryne_sp_4                        0.04%    passed     66.45%
+ 234  AA24862_Asterophrys_sp                             2.34%    passed     16.32%
+ 235  BJE1120_Oreophryne_A_senckenbergiana               1.29%    passed     44.52%
+ 236  BJE1143_Oreophryne_A_senckenbergiana               1.21%    passed     43.82%
+ 237  BJE1144_Oreophryne_A_senckenbergiana               1.21%    passed     43.28%
+ 238  BJE1248_Oreophryne_A_frontifasciata                1.58%    passed     63.14%
+****  TOTAL                                              2.08%  2 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 15 partitions...
+Identifying sites to remove: done in 0.000571966 secs using 87.77% CPU
+Identifying sites to remove: done in 0.000518084 secs using 90.72% CPU
+Identifying sites to remove: done in 0.000681877 secs using 85.79% CPU
+Identifying sites to remove: done in 0.000612974 secs using 87.12% CPU
+Identifying sites to remove: done in 0.000438929 secs using 97.05% CPU
+Identifying sites to remove: done in 0.000651836 secs using 84.99% CPU
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		238	136	4	118	TEST	sia_pos1
+2		238	136	0	128	TEST	sia_pos2
+WARNING: No parsimony-informative sites in partition sia_pos2
+3		238	135	72	45	TEST	sia_pos3
+4		238	173	78	78	TEST	bdnf_pos1
+5		238	172	16	154	TEST	bdnf_pos2
+6		238	172	4	163	TEST	bdnf_pos3
+7		238	185	16	144	TEST	nxc_pos1
+8		238	185	10	164	TEST	nxc_pos2
+9		238	185	96	52	TEST	nxc_pos3
+10		237	170	86	72	TEST	cyb_pos1
+11		237	170	59	99	TEST	cyb_pos2
+12		237	170	170	0	TEST	cyb_pos3
+13		230	162	110	39	TEST	nd4_pos1
+14		230	162	68	73	TEST	nd4_pos2
+15		230	162	162	0	TEST	nd4_pos3
+Degree of missing data: 0.007
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.107 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Initial log-likelihood: -98602.108
+Current log-likelihood at step 1: -84358.349
+Current log-likelihood at step 2: -83759.229
+Current log-likelihood at step 3: -83710.840
+Current log-likelihood at step 4: -83682.959
+Current log-likelihood at step 5: -83640.061
+Current log-likelihood at step 6: -83628.698
+Current log-likelihood at step 7: -83623.340
+Current log-likelihood at step 8: -83621.273
+Parameters optimization took 7 rounds (15.310 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 5.04507 secs using 99.56% CPU
+Estimate model parameters (epsilon = 1.000)
+Initial log-likelihood: -83403.346
+Current log-likelihood at step 1: -83399.579
+Current log-likelihood at step 2: -83398.554
+Current log-likelihood at step 3: -83398.101
+Partition-specific rates:  0.143 0.244 1.074 0.499 0.222 0.123 0.646 0.393 0.442 1.575 0.595 2.911 2.550 0.806 2.780
+Parameters optimization took 2 rounds (3.751 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Time for fast ML tree search: 24.167 seconds
+
+NOTE: ModelFinder requires 6 MB RAM!
+Selecting individual models for 15 charsets using BIC...
+ No. Model        Score       TreeLen     Charset
+   1 TNe+I+G4     1050.661    0.625       sia_pos1
+   2 JC+I+G4      610.419     2.586       sia_pos2
+   3 TN+F+I+G4    6791.330    7.069       sia_pos3
+   4 K2P+I+G4     5809.814    3.220       bdnf_pos1
+   5 TVMe+I+G4    1590.507    0.662       bdnf_pos2
+   6 TIMe+I+G4    807.920     0.657       bdnf_pos3
+   7 TIM2+F+I+G4  2064.989    0.891       nxc_pos1
+   8 TIM3+F+I+G4  1640.100    2.607       nxc_pos2
+   9 TN+F+G4      6685.893    2.939       nxc_pos3
+  10 TIM2e+I+G4   13868.932   11.188      cyb_pos1	0h:0m:38s (0h:0m:19s left)
+  11 GTR+F+I+G4   5728.543    3.947       cyb_pos2	0h:0m:43s (0h:0m:15s left)
+  12 TIM2+F+ASC+G4 49811.241   88.391      cyb_pos3	0h:0m:56s (0h:0m:14s left)
+  13 TIM2+F+I+G4  16958.587   16.629      nd4_pos1	0h:1m:1s (0h:0m:9s left)
+  14 GTR+F+I+G4   6911.295    5.324       nd4_pos2	0h:1m:8s (0h:0m:4s left)
+  15 TN+F+ASC+G4  46102.289   84.665      nd4_pos3	0h:1m:18s (0h:0m:0s left)
+Full partition model BIC score: 170417.923 (LnL: -82935.089  df:582)
+Partition information was printed to senkenbergiana.best_scheme.nex
+Partition information in Raxml format was printed to senkenbergiana.best_scheme
+
+All model information printed to senkenbergiana.model.gz
+CPU time for ModelFinder: 102.962 seconds (0h:1m:42s)
+Wall-clock time for ModelFinder: 103.425 seconds (0h:1m:43s)
+Generating 1000 samples for ultrafast bootstrap (seed: 119510)...
+
+NOTE: 54 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82935.367
+Current log-likelihood at step 1: -82920.972
+Current log-likelihood at step 2: -82919.974
+Current log-likelihood at step 3: -82919.738
+Current log-likelihood at step 4: -82919.633
+Current log-likelihood at step 5: -82919.563
+Partition-specific rates:  0.038 0.147 0.443 0.201 0.041 0.041 0.059 0.165 0.184 0.710 0.247 5.747 1.060 0.337 5.552
+Parameters optimization took 4 rounds (3.925 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.010838 secs using 97.91% CPU
+Computing ML distances took 0.011254 sec (of wall-clock time) 0.010827 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00057292 secs using 166.3% CPU
+Constructing RapidNJ tree: done in 0.00195885 secs using 179.6% CPU
+Computing RapidNJ tree took 0.002628 sec (of wall-clock time) 0.004599 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -119629.783
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 13.889 second
+Computing log-likelihood of 98 initial trees ... 23.687 seconds
+Current best score: -82919.563
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 1.95292 secs using 99.67% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82899.374
+Current log-likelihood at step 1: -82898.936
+Current log-likelihood at step 2: -82898.809
+Current log-likelihood at step 3: -82898.738
+Parameters optimization took 2 rounds (2.205 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -82898.738
+Optimizing NNI: done in 5.5691 secs using 99.77% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82834.270
+Current log-likelihood at step 1: -82833.300
+Current log-likelihood at step 2: -82833.152
+Current log-likelihood at step 3: -82833.076
+Parameters optimization took 2 rounds (2.257 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 2: -82833.076
+Optimizing NNI: done in 3.13527 secs using 99.77% CPU
+Optimizing NNI: done in 5.30884 secs using 99.73% CPU
+Optimizing NNI: done in 4.29677 secs using 99.77% CPU
+Optimizing NNI: done in 4.8213 secs using 99.73% CPU
+Optimizing NNI: done in 5.3236 secs using 99.77% CPU
+Optimizing NNI: done in 3.93285 secs using 99.72% CPU
+Optimizing NNI: done in 3.94694 secs using 99.68% CPU
+Optimizing NNI: done in 5.21644 secs using 99.72% CPU
+Iteration 10 / LogL: -82889.164 / Time: 0h:1m:33s
+Optimizing NNI: done in 4.00557 secs using 99.77% CPU
+Optimizing NNI: done in 4.4428 secs using 99.76% CPU
+Optimizing NNI: done in 4.3279 secs using 99.75% CPU
+Optimizing NNI: done in 3.96455 secs using 99.75% CPU
+Optimizing NNI: done in 4.77457 secs using 99.76% CPU
+Optimizing NNI: done in 4.26307 secs using 99.78% CPU
+Optimizing NNI: done in 5.65919 secs using 99.53% CPU
+Optimizing NNI: done in 4.37448 secs using 99.72% CPU
+Optimizing NNI: done in 4.92198 secs using 99.74% CPU
+Optimizing NNI: done in 4.24747 secs using 99.76% CPU
+Iteration 20 / LogL: -82884.004 / Time: 0h:2m:18s
+Finish initializing candidate tree set (20)
+Current best tree score: -82833.076 / CPU time: 131.188
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 4.1181 secs using 99.55% CPU
+Optimizing NNI: done in 3.77416 secs using 99.71% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82825.224
+Current log-likelihood at step 1: -82824.533
+Current log-likelihood at step 2: -82824.374
+Current log-likelihood at step 3: -82824.309
+Parameters optimization took 2 rounds (2.247 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 22: -82824.309
+Optimizing NNI: done in 4.35021 secs using 99.67% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82803.903
+Current log-likelihood at step 1: -82803.390
+Current log-likelihood at step 2: -82803.306
+Parameters optimization took 1 rounds (1.435 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 23: -82803.306
+Optimizing NNI: done in 4.08421 secs using 99.66% CPU
+Optimizing NNI: done in 3.72233 secs using 99.72% CPU
+Optimizing NNI: done in 3.51373 secs using 99.75% CPU
+Optimizing NNI: done in 3.82036 secs using 99.77% CPU
+Optimizing NNI: done in 3.68337 secs using 99.74% CPU
+Optimizing NNI: done in 3.52631 secs using 99.73% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82802.460
+Current log-likelihood at step 1: -82802.334
+Current log-likelihood at step 2: -82802.279
+Parameters optimization took 1 rounds (1.363 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 29: -82802.279
+Optimizing NNI: done in 3.75493 secs using 99.68% CPU
+Iteration 30 / LogL: -82890.226 / Time: 0h:3m:3s (0h:10m:25s left)
+Optimizing NNI: done in 3.85759 secs using 99.72% CPU
+Optimizing NNI: done in 4.16352 secs using 99.79% CPU
+Optimizing NNI: done in 3.70745 secs using 99.74% CPU
+Optimizing NNI: done in 3.62365 secs using 99.79% CPU
+Optimizing NNI: done in 4.31777 secs using 99.76% CPU
+Optimizing NNI: done in 3.96408 secs using 99.35% CPU
+Optimizing NNI: done in 3.07794 secs using 99.57% CPU
+Optimizing NNI: done in 4.05756 secs using 99.73% CPU
+Optimizing NNI: done in 3.71551 secs using 99.72% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82800.042
+Current log-likelihood at step 1: -82799.734
+Current log-likelihood at step 2: -82799.607
+Current log-likelihood at step 3: -82799.552
+Parameters optimization took 2 rounds (2.091 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 39: -82799.552
+Optimizing NNI: done in 3.975 secs using 99.6% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82798.794
+Current log-likelihood at step 1: -82798.680
+Current log-likelihood at step 2: -82798.635
+Parameters optimization took 1 rounds (1.313 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 40: -82798.635
+Iteration 40 / LogL: -82798.635 / Time: 0h:3m:45s (0h:9m:39s left)
+Optimizing NNI: done in 4.02111 secs using 99.64% CPU
+Optimizing NNI: done in 4.58173 secs using 99.73% CPU
+Optimizing NNI: done in 3.77702 secs using 99.73% CPU
+Optimizing NNI: done in 3.30503 secs using 99.75% CPU
+Optimizing NNI: done in 4.09029 secs using 99.74% CPU
+Optimizing NNI: done in 4.03385 secs using 99.73% CPU
+Optimizing NNI: done in 3.78892 secs using 99.76% CPU
+Optimizing NNI: done in 3.75353 secs using 99.73% CPU
+Optimizing NNI: done in 3.49339 secs using 99.74% CPU
+Optimizing NNI: done in 3.68261 secs using 99.71% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82795.917
+Current log-likelihood at step 1: -82795.471
+Current log-likelihood at step 2: -82795.434
+Parameters optimization took 1 rounds (1.547 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 50: -82795.434
+Iteration 50 / LogL: -82795.434 / Time: 0h:4m:26s (0h:9m:4s left)
+Log-likelihood cutoff on original alignment: -82922.141
+Optimizing NNI: done in 3.92221 secs using 99.62% CPU
+Optimizing NNI: done in 3.55974 secs using 99.68% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82795.012
+Current log-likelihood at step 1: -82794.925
+Parameters optimization took 0 rounds (0.697 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 52: -82794.925
+Optimizing NNI: done in 3.70177 secs using 99.61% CPU
+Optimizing NNI: done in 3.82483 secs using 99.74% CPU
+Optimizing NNI: done in 3.87923 secs using 99.71% CPU
+Optimizing NNI: done in 3.98088 secs using 99.74% CPU
+Optimizing NNI: done in 3.52977 secs using 99.74% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82791.255
+Current log-likelihood at step 1: -82791.113
+Current log-likelihood at step 2: -82791.086
+Parameters optimization took 1 rounds (1.320 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 57: -82791.086
+Optimizing NNI: done in 3.88962 secs using 99.64% CPU
+Optimizing NNI: done in 3.39106 secs using 99.71% CPU
+Optimizing NNI: done in 3.73125 secs using 99.68% CPU
+Iteration 60 / LogL: -82813.565 / Time: 0h:5m:7s (0h:8m:26s left)
+Optimizing NNI: done in 3.99163 secs using 99.75% CPU
+Optimizing NNI: done in 4.12275 secs using 99.67% CPU
+Optimizing NNI: done in 4.0255 secs using 99.75% CPU
+Optimizing NNI: done in 3.16105 secs using 99.77% CPU
+Optimizing NNI: done in 3.9826 secs using 99.74% CPU
+Optimizing NNI: done in 3.77398 secs using 99.77% CPU
+Optimizing NNI: done in 4.26487 secs using 99.61% CPU
+Optimizing NNI: done in 3.44481 secs using 99.72% CPU
+Optimizing NNI: done in 3.98674 secs using 99.76% CPU
+Optimizing NNI: done in 3.65756 secs using 99.72% CPU
+Iteration 70 / LogL: -82822.167 / Time: 0h:5m:47s (0h:7m:17s left)
+Optimizing NNI: done in 3.66481 secs using 99.76% CPU
+Optimizing NNI: done in 3.45974 secs using 99.76% CPU
+Optimizing NNI: done in 4.40295 secs using 99.71% CPU
+Optimizing NNI: done in 4.00625 secs using 99.74% CPU
+Optimizing NNI: done in 3.77947 secs using 99.73% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82790.113
+Current log-likelihood at step 1: -82790.017
+Parameters optimization took 0 rounds (0.665 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 75: -82790.017
+Optimizing NNI: done in 4.3121 secs using 99.67% CPU
+Optimizing NNI: done in 4.11618 secs using 99.72% CPU
+Optimizing NNI: done in 4.05631 secs using 99.72% CPU
+Optimizing NNI: done in 4.16707 secs using 99.75% CPU
+Optimizing NNI: done in 3.848 secs using 99.67% CPU
+Iteration 80 / LogL: -82791.386 / Time: 0h:6m:28s (0h:7m:47s left)
+Optimizing NNI: done in 3.85012 secs using 99.75% CPU
+Optimizing NNI: done in 4.00455 secs using 99.62% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82782.239
+Current log-likelihood at step 1: -82781.995
+Current log-likelihood at step 2: -82781.923
+Parameters optimization took 1 rounds (1.382 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 82: -82781.923
+Optimizing NNI: done in 4.02401 secs using 99.64% CPU
+Optimizing NNI: done in 3.77295 secs using 99.71% CPU
+Optimizing NNI: done in 4.08176 secs using 99.71% CPU
+Optimizing NNI: done in 3.60384 secs using 99.76% CPU
+Optimizing NNI: done in 3.76884 secs using 99.75% CPU
+Optimizing NNI: done in 4.01843 secs using 99.75% CPU
+Optimizing NNI: done in 4.1167 secs using 99.76% CPU
+Optimizing NNI: done in 3.53609 secs using 99.75% CPU
+Iteration 90 / LogL: -82782.891 / Time: 0h:7m:9s (0h:7m:23s left)
+Optimizing NNI: done in 3.89575 secs using 99.76% CPU
+Optimizing NNI: done in 4.34182 secs using 99.75% CPU
+Optimizing NNI: done in 3.46854 secs using 99.75% CPU
+Optimizing NNI: done in 3.97278 secs using 99.71% CPU
+Optimizing NNI: done in 4.13617 secs using 99.69% CPU
+Optimizing NNI: done in 3.89487 secs using 99.58% CPU
+Optimizing NNI: done in 3.63998 secs using 99.62% CPU
+Optimizing NNI: done in 3.82705 secs using 99.76% CPU
+Optimizing NNI: done in 3.76662 secs using 99.72% CPU
+Optimizing NNI: done in 4.00521 secs using 99.72% CPU
+Iteration 100 / LogL: -82782.099 / Time: 0h:7m:49s (0h:6m:28s left)
+Log-likelihood cutoff on original alignment: -82922.141
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.975
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 4.45684 secs using 99.75% CPU
+Optimizing NNI: done in 3.39768 secs using 99.71% CPU
+Optimizing NNI: done in 3.14707 secs using 99.76% CPU
+Optimizing NNI: done in 3.39907 secs using 99.74% CPU
+Optimizing NNI: done in 4.05791 secs using 99.72% CPU
+Optimizing NNI: done in 3.02611 secs using 99.74% CPU
+Optimizing NNI: done in 3.56242 secs using 99.69% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82781.485
+Current log-likelihood at step 1: -82781.264
+Current log-likelihood at step 2: -82781.218
+Parameters optimization took 1 rounds (1.477 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 107: -82781.218
+Optimizing NNI: done in 3.9022 secs using 99.62% CPU
+Optimizing NNI: done in 3.85191 secs using 99.64% CPU
+Optimizing NNI: done in 4.07792 secs using 99.73% CPU
+Iteration 110 / LogL: -82785.980 / Time: 0h:8m:29s (0h:7m:33s left)
+Optimizing NNI: done in 4.12765 secs using 99.69% CPU
+Optimizing NNI: done in 3.62513 secs using 99.68% CPU
+Optimizing NNI: done in 3.78123 secs using 99.55% CPU
+Optimizing NNI: done in 4.57441 secs using 99.69% CPU
+Optimizing NNI: done in 3.70487 secs using 99.64% CPU
+Optimizing NNI: done in 3.90322 secs using 99.68% CPU
+Optimizing NNI: done in 3.90628 secs using 99.68% CPU
+Optimizing NNI: done in 3.92791 secs using 99.62% CPU
+Optimizing NNI: done in 3.66768 secs using 99.66% CPU
+Optimizing NNI: done in 4.20982 secs using 99.65% CPU
+Iteration 120 / LogL: -82782.242 / Time: 0h:9m:9s (0h:6m:41s left)
+Optimizing NNI: done in 4.2764 secs using 99.68% CPU
+Optimizing NNI: done in 4.00784 secs using 99.68% CPU
+Optimizing NNI: done in 3.64071 secs using 99.64% CPU
+Optimizing NNI: done in 3.6382 secs using 99.64% CPU
+Optimizing NNI: done in 3.55983 secs using 99.63% CPU
+Optimizing NNI: done in 3.73167 secs using 99.65% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -82780.967
+Current log-likelihood at step 1: -82780.720
+Current log-likelihood at step 2: -82780.689
+Parameters optimization took 1 rounds (1.472 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 126: -82780.689
+Optimizing NNI: done in 3.53713 secs using 99.62% CPU
+Optimizing NNI: done in 3.75569 secs using 99.57% CPU
+Optimizing NNI: done in 3.77948 secs using 99.65% CPU
+Optimizing NNI: done in 4.12385 secs using 99.65% CPU
+Iteration 130 / LogL: -82780.858 / Time: 0h:9m:49s (0h:7m:19s left)
+Optimizing NNI: done in 3.27082 secs using 99.65% CPU
+Optimizing NNI: done in 3.45459 secs using 99.66% CPU
+Optimizing NNI: done in 3.74467 secs using 99.62% CPU
+Optimizing NNI: done in 3.73598 secs using 99.7% CPU
+Optimizing NNI: done in 3.64396 secs using 99.72% CPU
+Optimizing NNI: done in 3.8884 secs using 99.69% CPU
+Optimizing NNI: done in 3.78232 secs using 99.7% CPU
+Optimizing NNI: done in 3.72094 secs using 99.71% CPU
+Optimizing NNI: done in 3.54797 secs using 99.69% CPU
+Optimizing NNI: done in 3.96071 secs using 99.65% CPU
+Iteration 140 / LogL: -82784.214 / Time: 0h:10m:27s (0h:6m:28s left)
+Optimizing NNI: done in 3.4207 secs using 99.68% CPU
+Optimizing NNI: done in 3.7497 secs using 99.78% CPU
+Optimizing NNI: done in 3.83082 secs using 99.95% CPU
+Optimizing NNI: done in 3.2439 secs using 99.81% CPU
+Optimizing NNI: done in 4.12815 secs using 99.82% CPU
+Optimizing NNI: done in 3.75824 secs using 99.83% CPU
+Optimizing NNI: done in 4.3615 secs using 99.8% CPU
+Optimizing NNI: done in 3.60444 secs using 99.81% CPU
+Optimizing NNI: done in 3.58737 secs using 99.78% CPU
+Optimizing NNI: done in 3.67908 secs using 99.77% CPU
+Iteration 150 / LogL: -82783.871 / Time: 0h:11m:5s (0h:5m:39s left)
+Log-likelihood cutoff on original alignment: -82922.141
+Optimizing NNI: done in 3.73663 secs using 99.75% CPU
+Optimizing NNI: done in 4.21394 secs using 99.76% CPU
+Optimizing NNI: done in 3.83701 secs using 99.75% CPU
+Optimizing NNI: done in 3.97726 secs using 99.72% CPU
+Optimizing NNI: done in 4.16047 secs using 99.73% CPU
+Optimizing NNI: done in 3.60647 secs using 99.73% CPU
+Optimizing NNI: done in 3.45981 secs using 99.75% CPU
+Optimizing NNI: done in 3.19917 secs using 99.76% CPU
+Optimizing NNI: done in 4.10326 secs using 99.74% CPU
+Optimizing NNI: done in 4.0062 secs using 99.66% CPU
+Iteration 160 / LogL: -82783.703 / Time: 0h:11m:45s (0h:4m:53s left)
+Optimizing NNI: done in 3.6498 secs using 99.66% CPU
+Optimizing NNI: done in 3.58636 secs using 99.73% CPU
+Optimizing NNI: done in 3.65222 secs using 99.77% CPU
+Optimizing NNI: done in 3.76737 secs using 99.76% CPU
+Optimizing NNI: done in 3.96861 secs using 99.76% CPU
+Optimizing NNI: done in 3.98441 secs using 99.77% CPU
+Optimizing NNI: done in 3.61421 secs using 99.73% CPU
+Optimizing NNI: done in 3.38739 secs using 99.78% CPU
+Optimizing NNI: done in 4.22438 secs using 99.76% CPU
+Optimizing NNI: done in 3.72845 secs using 99.75% CPU
+Iteration 170 / LogL: -82782.698 / Time: 0h:12m:24s (0h:4m:6s left)
+Optimizing NNI: done in 3.60892 secs using 99.75% CPU
+Optimizing NNI: done in 3.46129 secs using 99.71% CPU
+Optimizing NNI: done in 3.475 secs using 99.72% CPU
+Optimizing NNI: done in 3.61827 secs using 99.74% CPU
+Optimizing NNI: done in 4.18879 secs using 99.76% CPU
+Optimizing NNI: done in 3.77705 secs using 99.65% CPU
+Optimizing NNI: done in 3.78676 secs using 99.7% CPU
+Optimizing NNI: done in 3.71227 secs using 99.72% CPU
+Optimizing NNI: done in 3.65326 secs using 99.74% CPU
+Optimizing NNI: done in 3.97005 secs using 99.74% CPU
+Iteration 180 / LogL: -82781.676 / Time: 0h:13m:2s (0h:3m:21s left)
+Optimizing NNI: done in 3.63468 secs using 99.77% CPU
+Optimizing NNI: done in 3.72937 secs using 99.77% CPU
+Optimizing NNI: done in 3.78527 secs using 99.72% CPU
+Optimizing NNI: done in 3.63503 secs using 99.75% CPU
+Optimizing NNI: done in 4.09671 secs using 99.73% CPU
+Optimizing NNI: done in 3.98504 secs using 99.74% CPU
+Optimizing NNI: done in 3.77891 secs using 99.74% CPU
+Optimizing NNI: done in 3.13138 secs using 99.74% CPU
+Optimizing NNI: done in 3.81504 secs using 99.74% CPU
+Optimizing NNI: done in 4.13499 secs using 99.77% CPU
+Iteration 190 / LogL: -82781.169 / Time: 0h:13m:41s (0h:2m:36s left)
+Optimizing NNI: done in 3.71834 secs using 99.73% CPU
+Optimizing NNI: done in 3.83596 secs using 99.68% CPU
+Optimizing NNI: done in 3.6442 secs using 99.7% CPU
+Optimizing NNI: done in 4.41196 secs using 99.76% CPU
+Optimizing NNI: done in 4.1757 secs using 99.76% CPU
+Optimizing NNI: done in 4.28402 secs using 99.74% CPU
+Optimizing NNI: done in 3.09975 secs using 99.74% CPU
+Optimizing NNI: done in 3.38728 secs using 99.71% CPU
+Optimizing NNI: done in 3.80059 secs using 99.74% CPU
+Optimizing NNI: done in 3.83413 secs using 99.76% CPU
+UPDATE BEST LOG-LIKELIHOOD: -82780.688
+Iteration 200 / LogL: -82780.688 / Time: 0h:14m:20s (0h:1m:52s left)
+Log-likelihood cutoff on original alignment: -82922.141
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Optimizing NNI: done in 3.81638 secs using 99.63% CPU
+Optimizing NNI: done in 3.56428 secs using 99.74% CPU
+Optimizing NNI: done in 3.77053 secs using 99.76% CPU
+Optimizing NNI: done in 5.24121 secs using 99.74% CPU
+Optimizing NNI: done in 4.37934 secs using 99.72% CPU
+Optimizing NNI: done in 3.50255 secs using 99.76% CPU
+Optimizing NNI: done in 4.01695 secs using 99.66% CPU
+Optimizing NNI: done in 3.82093 secs using 99.73% CPU
+Optimizing NNI: done in 3.55574 secs using 99.73% CPU
+Optimizing NNI: done in 3.50606 secs using 99.75% CPU
+Iteration 210 / LogL: -82785.833 / Time: 0h:15m:1s (0h:6m:28s left)
+Optimizing NNI: done in 3.72155 secs using 99.75% CPU
+Optimizing NNI: done in 3.74218 secs using 99.78% CPU
+Optimizing NNI: done in 3.7465 secs using 99.75% CPU
+Optimizing NNI: done in 4.07812 secs using 99.76% CPU
+Optimizing NNI: done in 4.27546 secs using 99.77% CPU
+Optimizing NNI: done in 3.70763 secs using 99.76% CPU
+Optimizing NNI: done in 3.66597 secs using 99.78% CPU
+Optimizing NNI: done in 3.94431 secs using 99.74% CPU
+Optimizing NNI: done in 3.7845 secs using 99.67% CPU
+Optimizing NNI: done in 3.70713 secs using 99.74% CPU
+Iteration 220 / LogL: -82815.967 / Time: 0h:15m:40s (0h:5m:43s left)
+Optimizing NNI: done in 3.73914 secs using 99.7% CPU
+Optimizing NNI: done in 3.47676 secs using 99.79% CPU
+Optimizing NNI: done in 3.33577 secs using 99.64% CPU
+Optimizing NNI: done in 3.95507 secs using 99.67% CPU
+Optimizing NNI: done in 3.30085 secs using 99.7% CPU
+Optimizing NNI: done in 3.67581 secs using 99.71% CPU
+Optimizing NNI: done in 4.17083 secs using 99.71% CPU
+TREE SEARCH COMPLETED AFTER 227 ITERATIONS / Time: 0h:16m:7s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -82780.688
+Current log-likelihood at step 1: -82780.655
+Current log-likelihood at step 2: -82780.629
+Current log-likelihood at step 3: -82780.603
+Current log-likelihood at step 4: -82780.582
+Current log-likelihood at step 5: -82780.563
+Current log-likelihood at step 6: -82780.544
+Current log-likelihood at step 7: -82780.530
+Current log-likelihood at step 8: -82780.511
+Current log-likelihood at step 9: -82780.494
+Current log-likelihood at step 10: -82780.480
+Current log-likelihood at step 11: -82780.466
+Current log-likelihood at step 12: -82780.448
+Current log-likelihood at step 13: -82780.433
+Current log-likelihood at step 14: -82780.419
+Current log-likelihood at step 15: -82780.406
+Current log-likelihood at step 16: -82780.390
+Current log-likelihood at step 17: -82780.375
+Current log-likelihood at step 18: -82780.363
+Current log-likelihood at step 19: -82780.352
+Current log-likelihood at step 20: -82780.340
+Current log-likelihood at step 21: -82780.314
+Current log-likelihood at step 22: -82780.301
+Current log-likelihood at step 23: -82780.290
+Current log-likelihood at step 24: -82780.280
+Current log-likelihood at step 25: -82780.270
+Current log-likelihood at step 26: -82780.258
+Current log-likelihood at step 27: -82780.247
+Current log-likelihood at step 28: -82780.237
+Current log-likelihood at step 29: -82780.227
+Current log-likelihood at step 30: -82780.217
+Partition-specific rates:  0.038 0.125 0.436 0.192 0.038 0.035 0.057 0.154 0.168 0.702 0.231 5.677 1.039 0.332 5.756
+Parameters optimization took 29 rounds (19.970 sec)
+
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Partition information was printed to senkenbergiana.best_model.nex
+BEST SCORE FOUND : -82780.217
+Creating bootstrap support values...
+Split supports printed to NEXUS file senkenbergiana.splits.nex
+Total tree length: 16.479
+
+Total number of iterations: 227
+CPU time used for tree search: 955.952 sec (0h:15m:55s)
+Wall-clock time used for tree search: 959.247 sec (0h:15m:59s)
+Total CPU time used: 984.591 sec (0h:16m:24s)
+Total wall-clock time used: 987.900 sec (0h:16m:27s)
+
+Computing bootstrap consensus tree...
+Reading input file senkenbergiana.splits.nex...
+238 taxa and 966 splits.
+Consensus tree written to senkenbergiana.contree
+Reading input trees file senkenbergiana.contree
+Log-likelihood of consensus tree: -82780.222
+
+Analysis results written to: 
+  IQ-TREE report:                senkenbergiana.iqtree
+  Maximum-likelihood tree:       senkenbergiana.treefile
+  Likelihood distances:          senkenbergiana.mldist
+  Best partitioning scheme:      senkenbergiana.best_scheme.nex
+           in RAxML format:      senkenbergiana.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          senkenbergiana.splits.nex
+  Consensus tree:                senkenbergiana.contree
+  Screen log file:               senkenbergiana.log
+
+--- Start phylogenetic dating ---
+Reading date file ../input/asterophryinae_dates.txt ...
+5 dates extracted
+Building time tree by least-square dating (LSD) with command:
+lsd -i senkenbergiana.timetree.subst -s 2475 -o senkenbergiana.timetree -g senkenbergiana.timetree.outgroup -d senkenbergiana.timetree.date -z 0 
+Reroot the tree(s) using given outgroups ...
+
+TREE 1
+*PROCESSING:
+Reading the tree ... 
+Collapse 0 (over 236) internal branches having branch length <= 0.000202
+ (settable via option -l)
+Parameter to adjust variances was set to 0.0234 (settable via option -b)
+Minimum branch length of time scaled tree (settable via option -u and -U): 0
+Estimating the root position on the branch defined by given outgroups ...
+
+*RESULTS:
+- Dating results:
+ rate 0.00929604, tMRCA -25.7729 , objective function 1.34812
+
+TOTAL ELAPSED TIME: 0.00788 seconds
+LSD results written to:
+  LSD report:                  senkenbergiana.timetree.lsd
+  Time tree in nexus format:   senkenbergiana.timetree.nex
+  Time tree in newick format:  senkenbergiana.timetree.nwk
+
+--- End phylogenetic dating ---
+Date and Time: Sat Jul 15 21:01:57 2023

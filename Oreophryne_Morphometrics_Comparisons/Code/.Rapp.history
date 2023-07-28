@@ -1,0 +1,607 @@
+p <- ggplot(data = iris)
+p + geom_point(aes(Petal.Length, Petal.Width))
+iris$id <- c(1:length(iris$Species))
+p <- iris |> ggplot() +
+geom_point(aes(Petal.Length, Petal.Width)) +
+geom_point(aes(Petal.Length, Petal.Width)) +#
+  geom_text(aes(Petal.Length, Petal.Width, label = id))
+p
+p + geom_point(size = 1) +  #
+  geom_text(nudge_x = 0.05) + #
+  scale_x_log10() +#
+  scale_y_log10() +#
+  xlab("Petal Length (log scale)") + #
+  ylab("Petal Width (log scale)") +#
+  ggtitle("Fisherʻs Iris dataset")
+p <- iris |> ggplot() + #
+  geom_point(aes(Petal.Length, Petal.Width)) +#
+  geom_text(aes(Petal.Length, Petal.Width, label = id))
+p
+p + geom_point(size = 1) +  #
+  geom_text(nudge_x = 0.05) + #
+  scale_x_log10() +#
+  scale_y_log10() +#
+  xlab("Petal Length (log scale)") + #
+  ylab("Petal Width (log scale)") +#
+  ggtitle("Fisherʻs Iris dataset")
+color
+colors
+colors()
+install.packages("remotes")#
+remotes::install_github("kassambara/easyGgplot2")
+easyGgplot2::showCols()
+iris$id <-1:length(iris$Species)#
+p <- iris |> ggplot(aes(Petal.Length, Petal.Width, label=id)
+iris$id <-1:length(iris$Species)#
+p <- iris |> ggplot(aes(Petal.Length, Petal.Width, label=id))
+p
+cols <- c("darkorange", "navyblue", "deeppink")
+p + geom_point(aes(col=Species, size=3))+ scale_color_manual(values=cols)
+names(cols) <- ("setosa", "versicolor", "virginica")
+cols <- c("darkorange", "navyblue", "deeppink")#
+names(cols) <- ("setosa", "versicolor", "virginica")
+cols <- c("darkorange", "navyblue", "deeppink")#
+names(cols) <- c("setosa", "versicolor", "virginica")
+cols <- c("darkorange", "navyblue", "deeppink")#
+names(cols) <- c("versicolor", "versicolor", "virginica")
+names(cols) <- c("versicolor", "virginica", "setosa")
+p + geom_point(aes(col=Species, size=3))+ scale_color_manual(values=cols)
+q <- p + geom_point(aes(col=Species, size=3))+ scale_color_manual(values=cols)
+q + geom_point(aes(alpha=0.5))
+q + geom_point(aes(col=Species, size=3, alpha=0.5))
+p + geom_point(aes(col=Species, size=3, alpha=0.5))+ scale_color_manual(values=cols)
+p + geom_jitter(aes(col=Species, size=3))+ scale_color_manual(values=cols)
+p + geom_jitter(aes(col=Species, size=3, alpha=0.5))+ scale_color_manual(values=cols)
+install.packages("cowplot")
+require(cowplot)
+plot1 <- p + geom_point() +#
+  scale_color_manual(values=cols) +#
+  geom_jitter(aes(col=Species, size = 3, alpha = 0.5))
+plot2 <- p + geom_point(aes(col=Species, size = 3, alpha = 0.5)) +#
+  scale_color_manual(values=cols) +#
+  geom_jitter()
+plot_grid(plot1, plot2, labels="AUTO")
+cowplot::plot_grid(plot1, plot2, labels="AUTO")
+plot2 <- p + geom_point(aes(col=Species, size = 3, alpha = 0.5)) +#
+  scale_color_manual(values=cols) +#
+  geom_boxplot()
+plot2
+plot2 <- p + geom_point(aes(col=Species, size = 3, alpha = 0.5)) +#
+  scale_color_manual(values=cols, aesthetics="fill") +#
+  geom_boxplot()
+cowplot::plot_grid(plot1, plot2, labels="AUTO")
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length))
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length)) + geom_point()
+boxplot1
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length)) + geom_boxplot()
+boxplot1
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length)) + geom_boxplot() + scale_color_manual(values=cols)
+boxplot1
+cols <- c("darkorange", "navyblue", "deeppink")
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length)) + geom_boxplot() + scale_color_manual(values=cols)
+boxplot1+ geom_boxplot() + scale_color_manual(values=cols)
+boxplot1+ geom_boxplot() + scale_color_manual(values=cols, aesthetics = "colour")
+boxplot1+ geom_boxplot() + scale_color_manual(values=cols, aesthetics = "fill")
+boxplot1+ geom_boxplot() + scale_colour_manual(values=cols, aesthetics = "fill")
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length, fill=Species))
+boxplot1+ geom_boxplot() + scale_colour_manual(values=cols, aesthetics = "fill")
+?geom_density
+?scale_color_manual
+densplot <- ggplot(iris, aes(x = Sepal.Length, fill = Species, col=Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="fill") +#
+  theme(legend.position = c(0.8, 0.8))
+plot_grid(plot1, plot2, labels="AUTO")
+plot_grid(boxplot, densplot, labels="AUTO")
+boxplot1 <- boxplot + geom_boxplot() + scale_colour_manual(values=cols, aesthetics = "fill")
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length, fill=Species))
+boxplot1 <- boxplot + geom_boxplot() + scale_colour_manual(values=cols, aesthetics = "fill")
+plot_grid(boxplot1, densplot, labels="AUTO")
+boxplot1
+plot_grid(boxplot2, densplot, labels="AUTO")
+boxplot1 <- iris |> ggplot(aes(x = Species, y = Petal.Length, fill=Species))
+boxplot2 <- boxplot1 + geom_boxplot() + scale_colour_manual(values=cols, aesthetics = "fill")
+plot_grid(boxplot2, densplot, labels="AUTO")
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species, col=Species)) +
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species, col=Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="fill") +#
+  theme(legend.position = c(0.8, 0.8))
+plot_grid(boxplot2, densplot, labels="AUTO")
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species, col=Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color") + Scale_color_manual(values=cols) +#
+  theme(legend.position = c(0.8, 0.8))
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species, col=Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color") + scale_color_manual(values=cols) +#
+  theme(legend.position = c(0.8, 0.8))
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species, col=Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color") + scale_fill_manual(values=cols) +#
+  theme(legend.position = c(0.8, 0.8))
+plot_grid(boxplot2, densplot, labels="AUTO")
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species, col=Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color", "fill") + +#
+  theme(legend.position = c(0.8, 0.8))
+plot_grid(boxplot2, densplot, labels="AUTO")
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color", "fill") + +#
+  theme(legend.position = c(0.8, 0.8))
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color", "fill")  +#
+  theme(legend.position = c(0.8, 0.8))
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color", "fill")  +#
+  theme(legend.position = c(0.8, 0.8))#
+#
+#side by side#
+plot_grid(boxplot2, densplot, labels="AUTO")
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics="color", "fill")  +#
+  theme(legend.position = c(0.8, 0.8))
+plot_grid(boxplot2, densplot, labels="AUTO")
+densplot <- ggplot(iris, aes(x = Sepal.Length, col=Species, fill = Species)) + #
+  geom_density(alpha=0.5) +#
+  scale_color_manual(values=cols, aesthetics=c("color", "fill"))  +#
+  theme(legend.position = c(0.8, 0.8))
+plot_grid(boxplot2, densplot, labels="AUTO")
+p <- iris |> ggplot(x=Petal.Length, y=Petal.Width)
+p + geom_point(aes(col=Species), size = 3) +#
+    geom_smooth()
+p <- iris |> ggplot(x=Petal.Length, y=Petal.Width)
+p + geom_point(aes(col=Species), size = 3) +#
+    geom_smooth()
+p + geom_point(aes(col=Species), size = 3) +#
+    geom_smooth(method="lm")
+p <- iris |> ggplot(aes(x=Petal.Length, y=Petal.Width))
+p + geom_point(aes(col=Species), size = 3) +#
+    geom_smooth()
+p + geom_point(aes(col=Species), size = 3) +#
+    geom_smooth(method="lm")
+p + geom_point(aes(col=Species), size = 3) +
+geom_smooth(method="lm", se=FALSE)
+lm.fit <- lm(iris$Petal.Width ~ iris$Petal.Length)
+lm.fit <- lm(iris$Petal.Width ~ iris$Petal.Length)#
+p + geom_point(aes(col=Species), size = 3) +#
+    geom_abline(intercept = coef(lm.fit)[1], slope= coef(lm.fit)[2])
+p + geom_point(aes(col=Species), size = 3) +#
+    geom_smooth( aes(group=Species), method="lm")
+r <- iris |> ggplot(aes(x = Petal.Length, y= Petal.Width, col=Species)) #
+r + geom_point(aes(col=Species), size = 3) +#
+    geom_smooth( method="lm")
+p + geom_point(aes(col=Species), size = 3) +#
+   geom_smooth( method="lm") + #
+   facet_wrap(~Species)
+p + geom_point(aes(col=Species), size = 3) +#
+   geom_smooth( method="lm") + #
+   facet_grid(. ~ Species)
+p + #
+  geom_point(aes(color = Species)) + #
+  theme_bw(base_family = "Times")
+ggsave(filename, plot = p)
+ggsave("filename.pdf", plot = p)
+pwd
+par(mfrow=c(1,2))#
+with(iris, boxplot(Sepal.Length))#
+with(iris, plot(Sepal.Length ~ Species))
+par(mfrow=c(2,1))#
+with(iris, boxplot(Sepal.Length))#
+with(iris, plot(Sepal.Length ~ Species))
+par(mfrow=c(1,2))#
+with(iris, boxplot(Sepal.Length))#
+with(iris, plot(Sepal.Length ~ Species))
+require(dplyr)#
+require(magrittr)#
+require(ggplot2)
+dat <- cbind(iris, id = 1:length(iris$Species))#
+yhat <- mean(iris$Sepal.Length)  # grand mean of Sepal Length#
+#
+p <- dat %>% ggplot(aes( x = id, y = Sepal.Length, group=Species)) #
+#
+q <- p + geom_point( size=2) + #
+  geom_hline( aes(yintercept = mean(iris$Sepal.Length)) ) + #
+  geom_segment( data=dat, aes( x = id, y = Sepal.Length, xend = id, yend = yhat), color="red", lty = 3)#
+#
+q
+dat <- cbind(iris, id = 1:length(iris$Species))#
+yhat <- mean(iris$Sepal.Length)  # grand mean of Sepal Length#
+#
+p <- dat %>% ggplot(aes( x = id, y = Sepal.Length, group=Species)) #
+#
+q <- p + geom_point(col=Species, size=2) + #
+  geom_hline( aes(yintercept = mean(iris$Sepal.Length)) ) + #
+  geom_segment( data=dat, aes( x = id, y = Sepal.Length, xend = id, yend = yhat), color="red", lty = 3) + scale_color_manual(Species)#
+#
+q
+iris$id <- 1:150
+with(iris, Sepal.Length ~ id)
+with(iris, plot(Sepal.Length ~ id))
+par()
+par(1)
+with(iris, plot(Sepal.Length ~ id))
+slm <- mean(iris$Sepal.Length)
+iris$slm <- slm
+iris$slerr <- iris$Sepal.Length - iris$slm
+head(iris)
+lines(iris$slerr)
+plot(lines(iris$id iris$slerr))
+abline(iris$Sepal.Length)
+abline?
+abline(iris$Sepal.Length)
+require(dplyr)#
+require(magrittr)#
+require(ggplot2)#
+#
+dat <- cbind(iris, id = 1:length(iris$Species))#
+yhat <- mean(iris$Sepal.Length)  # grand mean of Sepal Length#
+#
+p <- dat %>% ggplot(aes( x = id, y = Sepal.Length, group=Species)) #
+#
+q <- p + geom_point( size=2) + #
+  geom_hline( aes(yintercept = mean(iris$Sepal.Length)) ) + #
+  geom_segment( data=dat, aes( x = id, y = Sepal.Length, xend = id, yend = yhat), color="red", lty = 3)#
+#
+q
+spmeans  <- dat %>% group_by(Species) %>% #
+        summarise(#
+          sl = mean(Sepal.Length),#
+          n = length(Sepal.Length),#
+          minid = min(id),#
+          maxid = max(id)#
+        )#
+#
+spmeans
+merge(dat, spmeans)
+head(dat)
+dat <- merge(dat, spmeans)
+head(dat)
+dat[45:55]
+dat[45:55,]
+r <- p + geom_point( size=2) + #
+  geom_segment( data=spmeans, aes(x=minid, y = sl, xend=maxid, yend=sl, group=Species )) + #
+  geom_segment( data=dat, aes( x = id, y = Sepal.Length, xend = id, yend = sl, color=Species), lty = 3) #
+#
+r
+require(cowplot)
+plot_grid(#
+  q, #
+  r + theme(legend.position="none"), #
+  labels="AUTO")
+lm.fit <- with(iris, lm(Sepal.Length ~ Species))#
+summary(lm.fit)
+anova(lm.fit)
+pc.iris <- princomp (~ .-Species, data=iris, scores=T)
+summary(pc.iris)
+loadings(pc.iris)
+pc1 <- pc.iris$scores[,1]#
+pc2 <- pc.iris$scores[,2]#
+pc3 <- pc.iris$scores[,3]#
+plot(pc2 ~ pc1, col=iris$Species, cex=2, pch=16)
+plot(pc2 ~ pc1, col=iris$Species, cex=2, pch=16, ylim=c(-3, 4))
+plot(pc3 ~ pc1, col=iris$Species, cex=2, pch=16, ylim=c(-3, 4))
+manova.iris <- manova( cbind(pc1, pc2, pc3) ~ Species, data=iris)
+summary(manova.iris)
+summary(manova.iris, test="Wilks")
+summary.aov(manova.iris)
+install.packages("candisc")
+iris.multiv <- lm( cbind(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width) ~ Species, data=iris )#
+iris.can <- candisc( iris.multiv, term="Species")#
+iris.can
+require(candisc)
+iris.multiv <- lm( cbind(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width) ~ Species, data=iris )#
+iris.can <- candisc( iris.multiv, term="Species")#
+iris.can
+plot(iris.can, col=as.numeric(iris$Species))
+?plot
+iris.can$structure
+x <- runif(n=1, min=0, max=10)  #
+x
+if(x > 6) {#
+    y <- 10#
+  } else if (x > 3){#
+    y <- 5#
+  } else { y <- 0 }#
+x
+y
+x <- runif(n=1, min=0, max=10)  #
+x
+if(x > 6) {#
+    y <- 10#
+  } else if (x > 3){#
+    y <- 5#
+  } else { y <- 0 }#
+x
+y
+if(x > 3) {#
+    y <- 10#
+  } else if (x > 6){#
+    y <- 5#
+  } else { y <- 0 }#
+x
+y
+count <- 0#
+while(count < 10) {#
+        print(count)#
+        count <- count + 1#
+}
+count <- 0#
+while(count < 10000000) {#
+        print(count)#
+        count <- count + 1#
+}
+count <- 0#
+while(count < 1) {#
+        print(count)#
+        count <- count + 1#
+}
+count <- 0#
+while(count < -1) {#
+        print(count)#
+        count <- count + 1#
+}
+?set.seed
+z <- 5#
+set.seed(1)#
+#
+while(z >= 3 && z <= 10) {#
+        coin <- rbinom(1, 1, 0.5)#
+        if(coin == 1) {  ## random walk#
+                z <- z + 1#
+        } else {#
+                z <- z - 1#
+        } #
+}#
+print(z)
+((-2:2) >= 0) & ((-2:2) <= 0)
+2 >= 0
+(2 >= 0) && (-2 <= 0)
+(2 >= 0) & (-2 <= 0)
+x0 <- 1#
+tol <- 1e-8#
+#
+repeat {#
+        x1 <- computeEstimate()#
+        if(abs(x1 - x0) < tol) {  ## Close enough?#
+                break#
+        } else {#
+                x0 <- x1#
+        } #
+}
+?computeEstimate
+??computeEstimate
+x <- 10
+tol <- .001
+x
+guess <- 2
+x/guess #check if guess is correct
+(guess+check)/2
+check <- x/guess #check if guess is correct
+(guess+check)/2
+guess2 <- (guess+check)/2
+guess <- guess2 #set guess for sqrt x#
+check <- x/guess #check if guess is correct
+check
+guess <- guess2 #set guess for sqrt x#
+check <- x/guess #check if guess is correct#
+check
+abs(x - guess2*guess2)
+error <- abs(x - guess2*guess2)
+guess <- guess2 #set guess for sqrt x#
+check <- x/guess #check if guess is correct#
+check
+x <- 10 #read x#
+tol <- .001 #read tolerance#
+x #print x#
+#
+guess <- 2 #set guess for sqrt x#
+check <- x/guess #check if guess is correct#
+check
+guess2 <- (guess+check)/2
+error <= tol
+if (error <= tol) x/newguess
+x <- 9 #read x#
+tol <- .0001 #read tolerance#
+x #print x#
+#
+guess <- 10 #set guess for sqrt x#
+check <- x/guess #check if guess is correct#
+check
+newguess <- (guess+check)/2
+newguess
+error <- abs(x - newguess*newguess)#
+error
+if (error <= tol) {guess <- newguess}
+check <- x/guess #check if guess is correct#
+check
+guess
+guess <- newguess
+guess
+check <- x/guess #check if guess is correct#
+check
+newguess <- (guess+check)/2#
+newguess
+error <- abs(x - newguess*newguess)#
+error
+guess <- newguess
+check <- x/guess #check if guess is correct#
+check
+newguess <- (guess+check)/2#
+newguess
+error <- abs(x - newguess*newguess)#
+error
+guess <- newguess
+check <- x/guess #check if guess is correct#
+check
+check <- x/guess #check if guess is correct#
+check#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+newguess
+error <- abs(x - newguess*newguess)#
+error
+while (error <= tol) {check <- x/guess #check if guess is correct#
+check#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+newguess #
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+error#
+}
+while (error <= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+check#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+newguess #
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+error#
+}
+guess
+while (error <= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+check#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+newguess #
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+error#
+}
+while (error >= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+check#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+newguess #
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+error#
+}
+guess
+while (error >= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+check#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+newguess #
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+error#
+}
+guess
+while (error >= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+#
+guess <- newguess#
+}
+guess
+mysqrt <- function (x, tol= .0001) while (error >= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+#
+guess <- newguess#
+}
+mysqrt <- function (x, guess = x/2, tol= .0001) while (error >= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+#
+guess <- newguess#
+}
+mysqrt(100)
+mysqrt <- function (x, guess = x/2, tol= .0001) while (error >= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+#
+guess <- newguess#
+guess#
+}
+mysqrt(9)
+guess
+mysqrt(10)
+guess
+mysqrt <- function (x, guess = x/2, tol= .0001) {#
+while (error >= tol) {#is error small enough?#
+check <- x/guess #check if guess is correct#
+#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+check)/2#
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+#
+guess <- newguess#
+print(guess)#
+}#
+ return(guess)#
+ }
+mysqrt(x)
+mysqrt(9)
+mysqrt <- function (x, guess = x/2, tol= .0001) {#
+while (error >= tol) {#is error small enough?#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+x/guess)/2#
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+#
+guess <- newguess#
+print(guess)#
+}#
+ return(guess)#
+ }
+mysqrt(9)
+newguess <- (guess+x/guess)/2
+mysqrt <- function (x, guess = x/2, tol= .0001) {#
+while (error >= tol) {#is error small enough?#
+# if guess is correct, x/guess = guess, if not avg guess and check#
+newguess <- (guess+x/guess)/2#
+#
+# calculate error between the squared product of #
+error <- abs(x - newguess*newguess)#
+#
+guess <- newguess#
+print(guess)#
+}#
+ return(guess)#
+ }
+mysqrt(9)

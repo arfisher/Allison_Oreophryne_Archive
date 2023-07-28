@@ -1,0 +1,14 @@
+A	Woodlark Rossel	BPBM37718_Cophixalus_clapporum,BPBM20215_Cophixalus_cupricarenus	-6	1.792	0.0483	.7
+B	Rossel	Sudest	BPBM20142_Mantophryne_louisiadensis,BPBM20397_Mantophryne_axanthogaster	-4	1.386	0.071	.7
+C	Misima	Sudest	BPBM17048_Hylophorbus_cf__rufescens_11,BPBM20369_Hylophorbus_extimus	-4	1.386	0.071	.7
+D	Woodlark	Misima	BPBM39007_Copiula_sp_3,BPBM17084_Copiula_oxyrhina	-5	1.609	0.11    .7
+E	Woodlark	Rossel	BPBM38904_Barygenys_apodasta,BPBM20128_Barygenys_exsul	-6	1.792	0.0485	.7
+F    EPCT    FK15527_Paedophryne_verrucosa
+BPBM31882_Paedophryne_swiftorum_complex_sp_1
+BPBM47713_Paedophryne_amauensis
+BPBM48036_Paedophryne_sp_2
+FK16913_Paedophryne_titan
+MB291_Paedophryne_sp_1
+MB486_Paedophryne_swiftorum_complex_sp_2
+Uniform
+0 - 35

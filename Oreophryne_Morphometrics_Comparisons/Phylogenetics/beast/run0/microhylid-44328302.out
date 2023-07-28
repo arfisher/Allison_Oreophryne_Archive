@@ -1,0 +1,650 @@
+
+                        BEAST v2.7.3, 2002-2022
+             Bayesian Evolutionary Analysis Sampling Trees
+                       Designed and developed by
+ Remco Bouckaert, Alexei J. Drummond, Andrew Rambaut & Marc A. Suchard
+                                    
+                   Centre for Computational Evolution
+                         University of Auckland
+                       r.bouckaert@auckland.ac.nz
+                        alexei@cs.auckland.ac.nz
+                                    
+                   Institute of Evolutionary Biology
+                        University of Edinburgh
+                           a.rambaut@ed.ac.uk
+                                    
+                    David Geffen School of Medicine
+                 University of California, Los Angeles
+                           msuchard@ucla.edu
+                                    
+                      Downloads, Help & Resources:
+                           http://beast2.org/
+                                    
+  Source code distributed under the GNU Lesser General Public License:
+                   http://github.com/CompEvol/beast2
+                                    
+                           BEAST developers:
+   Alex Alekseyenko, Trevor Bedford, Erik Bloomquist, Joseph Heled, 
+ Sebastian Hoehna, Denise Kuehnert, Philippe Lemey, Wai Lok Sibon Li, 
+Gerton Lunter, Sidney Markowitz, Vladimir Minin, Michael Defoin Platel, 
+          Oliver Pybus, Tim Vaughan, Chieh-Hsi Wu, Walter Xie
+                                    
+                               Thanks to:
+          Roald Forsberg, Beth Shapiro and Korbinian Strimmer
+
+Random number seed: 1689775022036
+
+Resuming from file
+Alignment(oreophryne_senkenbergiana_alignment_20230715)
+  238 taxa
+  2475 sites
+  1392 patterns
+
+Filter 1-407\3
+238 taxa
+136 sites
+49 patterns
+WARNING: Adjust tip heights attribute set to 'true' in TreeParser
+         has resulted in significant (>0.1%) change in tree length.
+         Use adjustTipHeights='false' to override this default.
+  original max tip age =    0.409
+       new max tip age =    0.000
+  original tree length =   16.459
+       new tree length =   52.159
+       TL scale factor =    3.169
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  UCRelaxedClockModel: using 474 rate categories to approximate rate distribution across branches.
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 2-407\3
+238 taxa
+136 sites
+49 patterns
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 3-407\3
+238 taxa
+135 sites
+115 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 408-924\3
+238 taxa
+173 sites
+125 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 409-924\3
+238 taxa
+172 sites
+58 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 410-924\3
+238 taxa
+172 sites
+48 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 925-1479\3
+238 taxa
+185 sites
+68 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 926-1479\3
+238 taxa
+185 sites
+59 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 927-1479\3
+238 taxa
+185 sites
+150 patterns
+Starting frequencies: [0.2949309956865047, 0.2016804735580145, 0.2241358857982701, 0.27925264495721064]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 1480-1989\3
+238 taxa
+170 sites
+114 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 1481-1989\3
+238 taxa
+170 sites
+95 patterns
+Starting frequencies: [0.19989124243898568, 0.2577820408384358, 0.14658889803276398, 0.39573781868981456]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 1482-1989\3
+238 taxa
+170 sites
+170 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 1990-2475\3
+238 taxa
+162 sites
+135 patterns
+Starting frequencies: [0.25, 0.25, 0.25, 0.25]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 1991-2475\3
+238 taxa
+162 sites
+105 patterns
+Starting frequencies: [0.1261178752410347, 0.30288296637756235, 0.13348420284689852, 0.4375149555345043]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+Filter 1992-2475\3
+238 taxa
+162 sites
+162 patterns
+Starting frequencies: [0.3428950343474007, 0.32359794135804726, 0.052064998821655974, 0.2814420254728961]
+  Using BEAGLE version: 3.0.2 resource 0: CPU
+    with instance flags:  PRECISION_DOUBLE COMPUTATION_SYNCH EIGEN_REAL SCALING_MANUAL SCALERS_RAW VECTOR_NONE PROCESSOR_CPU FRAMEWORK_CPU
+===============================================================================
+Citations for this model:
+
+Bouckaert, Remco, Timothy G. Vaughan, Joëlle Barido-Sottani, Sebastián Duchêne, Mathieu Fourment, 
+Alexandra Gavryushkina, Joseph Heled, Graham Jones, Denise Kühnert, Nicola De Maio, Michael Matschiner, 
+Fábio K. Mendes, Nicola F. Müller, Huw A. Ogilvie, Louis du Plessis, Alex Popinga, Andrew Rambaut, 
+David Rasmussen, Igor Siveroni, Marc A. Suchard, Chieh-Hsi Wu, Dong Xie, Chi Zhang, Tanja Stadler, 
+Alexei J. Drummond 
+  BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis. 
+  PLoS computational biology 15, no. 4 (2019): e1006650.
+
+Gernhard 2008. The conditioned reconstructed process. Journal of Theoretical Biology Volume 253, Issue 4, 21 August 2008, Pages 769-778
+
+Tamura, K., & Nei, M. (1993). Estimation of the number of nucleotide substitutions in the control region of mitochondrial DNA in humans and chimpanzees. Molecular Biology and Evolution, 10(3), 512-526.
+
+Drummond AJ, Ho SYW, Phillips MJ, Rambaut A (2006) Relaxed Phylogenetics and
+  Dating with Confidence. PLoS Biol 4(5): e88
+
+Douglas J, Zhang R, Bouckaert R. Adaptive dating and fast proposals: Revisiting the phylogenetic relaxed clock model. PLoS computational biology. 2021 Feb 2;17(2):e1008322.
+
+Bouckaert RR. An efficient coalescent epoch model for Bayesian phylogenetic inference. Systematic Biology, syac015, 2022
+
+===============================================================================
+Restoring from file
+Start likelihood: -85109.42600755804 
+Appending file senken_run0.log
+Appending file senken_run0-senkenbergiana.trees
+         Sample      posterior     likelihood          prior
+      108300000    -85129.2214    -84352.6637      -776.5577 --
+      108400000    -85107.8427    -84353.5244      -754.3182 --
+      108500000    -85050.0869    -84364.7848      -685.3020 --
+      108600000    -85106.7125    -84378.1494      -728.5631 --
+      108700000    -85135.0478    -84376.5027      -758.5451 --
+      108800000    -85090.3067    -84357.4745      -732.8321 39m22s/Msamples
+      108900000    -85103.9509    -84353.2856      -750.6653 39m43s/Msamples
+      109000000    -85086.5696    -84335.6770      -750.8925 39m51s/Msamples
+      109100000    -85143.3126    -84377.8309      -765.4817 40m5s/Msamples
+      109200000    -85133.7424    -84355.2830      -778.4594 40m15s/Msamples
+      109300000    -85118.1291    -84328.6269      -789.5021 40m24s/Msamples
+      109400000    -85116.8422    -84331.7187      -785.1235 40m26s/Msamples
+      109500000    -85074.0486    -84310.0315      -764.0170 40m22s/Msamples
+      109600000    -85128.3457    -84364.7974      -763.5483 40m23s/Msamples
+      109700000    -85112.6075    -84359.4018      -753.2056 40m16s/Msamples
+      109800000    -85106.6783    -84327.0767      -779.6015 40m15s/Msamples
+      109900000    -85152.2820    -84358.8982      -793.3838 40m15s/Msamples
+      110000000    -85074.1130    -84328.8384      -745.2745 40m15s/Msamples
+      110100000    -85094.2873    -84339.1730      -755.1143 40m11s/Msamples
+      110200000    -85143.6573    -84341.3985      -802.2588 40m8s/Msamples
+      110300000    -85155.9013    -84373.6613      -782.2400 40m6s/Msamples
+      110400000    -85151.6906    -84373.5097      -778.1808 40m6s/Msamples
+      110500000    -85081.2636    -84344.0895      -737.1741 40m4s/Msamples
+      110600000    -85102.8600    -84363.8012      -739.0588 40m4s/Msamples
+      110700000    -85075.1022    -84357.9918      -717.1104 40m5s/Msamples
+      110800000    -85095.7045    -84362.3621      -733.3423 40m6s/Msamples
+      110900000    -85078.4809    -84330.1138      -748.3670 40m7s/Msamples
+      111000000    -85147.4076    -84354.7383      -792.6693 40m9s/Msamples
+      111100000    -85181.0538    -84382.7955      -798.2583 40m8s/Msamples
+      111200000    -85130.1094    -84366.6457      -763.4636 40m7s/Msamples
+      111300000    -85130.0769    -84334.7532      -795.3236 40m6s/Msamples
+      111400000    -85079.1125    -84364.9763      -714.1362 40m7s/Msamples
+      111500000    -85083.9137    -84362.0424      -721.8712 40m9s/Msamples
+      111600000    -85140.2967    -84353.9358      -786.3608 40m8s/Msamples
+      111700000    -85159.2424    -84370.8060      -788.4363 40m8s/Msamples
+      111800000    -85119.2826    -84359.4062      -759.8764 40m7s/Msamples
+      111900000    -85109.2851    -84376.0273      -733.2578 40m6s/Msamples
+      112000000    -85176.7243    -84371.5831      -805.1412 40m6s/Msamples
+      112100000    -85073.2260    -84351.2248      -722.0012 40m7s/Msamples
+      112200000    -85072.6071    -84345.1025      -727.5045 40m8s/Msamples
+      112300000    -85076.1966    -84348.7432      -727.4534 40m8s/Msamples
+      112400000    -85138.1443    -84365.3201      -772.8241 40m7s/Msamples
+      112500000    -85114.1455    -84342.3151      -771.8304 40m6s/Msamples
+      112600000    -85066.5481    -84325.3133      -741.2347 40m6s/Msamples
+      112700000    -85147.5584    -84384.7225      -762.8359 40m6s/Msamples
+      112800000    -85111.9940    -84368.2225      -743.7714 40m5s/Msamples
+      112900000    -85161.6428    -84343.6498      -817.9929 40m5s/Msamples
+      113000000    -85173.8325    -84337.7786      -836.0539 40m5s/Msamples
+      113100000    -85137.9210    -84333.8397      -804.0813 40m4s/Msamples
+      113200000    -85080.1962    -84329.6227      -750.5735 40m4s/Msamples
+      113300000    -85151.1258    -84366.1797      -784.9460 40m5s/Msamples
+      113400000    -85077.1111    -84344.7272      -732.3839 40m5s/Msamples
+      113500000    -85099.6748    -84364.5393      -735.1355 40m4s/Msamples
+      113600000    -85121.5765    -84356.7337      -764.8427 40m3s/Msamples
+      113700000    -85074.5478    -84346.2257      -728.3220 40m2s/Msamples
+      113800000    -85166.4370    -84344.2033      -822.2337 40m2s/Msamples
+      113900000    -85176.7301    -84379.0684      -797.6617 40m1s/Msamples
+      114000000    -85110.1578    -84328.2749      -781.8828 40m1s/Msamples
+      114100000    -85068.2919    -84351.0417      -717.2502 40m1s/Msamples
+      114200000    -85162.3833    -84383.5955      -778.7878 40m0s/Msamples
+      114300000    -85068.5629    -84346.8363      -721.7265 40m1s/Msamples
+      114400000    -85132.0481    -84343.0307      -789.0174 40m1s/Msamples
+      114500000    -85109.6287    -84346.5224      -763.1062 40m1s/Msamples
+      114600000    -85112.4189    -84366.5302      -745.8887 40m0s/Msamples
+      114700000    -85133.7677    -84362.7695      -770.9982 39m59s/Msamples
+      114800000    -85097.8482    -84310.6591      -787.1890 39m59s/Msamples
+      114900000    -85116.2640    -84348.6860      -767.5779 39m59s/Msamples
+      115000000    -85088.3994    -84338.6296      -749.7697 39m58s/Msamples
+      115100000    -85167.0822    -84370.1975      -796.8847 39m59s/Msamples
+      115200000    -85063.3170    -84334.3666      -728.9504 39m59s/Msamples
+      115300000    -85145.0440    -84352.3699      -792.6741 39m59s/Msamples
+      115400000    -85138.8066    -84362.6463      -776.1602 39m59s/Msamples
+      115500000    -85108.1427    -84337.3032      -770.8394 39m59s/Msamples
+      115600000    -85120.6661    -84347.5530      -773.1130 39m58s/Msamples
+      115700000    -85142.6370    -84367.9468      -774.6902 39m58s/Msamples
+      115800000    -85068.7998    -84343.4373      -725.3624 39m58s/Msamples
+      115900000    -85159.6239    -84385.0516      -774.5723 39m58s/Msamples
+      116000000    -85122.3915    -84335.8176      -786.5739 39m59s/Msamples
+      116100000    -85132.0106    -84335.0034      -797.0071 39m59s/Msamples
+      116200000    -85158.6343    -84376.9043      -781.7299 40m0s/Msamples
+      116300000    -85088.0745    -84352.1623      -735.9122 40m0s/Msamples
+      116400000    -85156.9356    -84367.9498      -788.9857 40m0s/Msamples
+      116500000    -85121.3012    -84368.7329      -752.5683 39m59s/Msamples
+      116600000    -85135.5011    -84368.8623      -766.6387 39m59s/Msamples
+      116700000    -85137.3029    -84345.0805      -792.2224 39m59s/Msamples
+      116800000    -85153.2121    -84357.5554      -795.6567 39m59s/Msamples
+      116900000    -85127.0002    -84336.7158      -790.2844 39m59s/Msamples
+      117000000    -85136.8142    -84344.3745      -792.4397 39m59s/Msamples
+      117100000    -85078.5321    -84359.2581      -719.2739 39m59s/Msamples
+      117200000    -85094.5751    -84342.2622      -752.3128 39m59s/Msamples
+      117300000    -85072.7336    -84321.9290      -750.8046 39m59s/Msamples
+      117400000    -85180.7392    -84379.0448      -801.6944 39m59s/Msamples
+      117500000    -85158.8326    -84344.1920      -814.6405 39m59s/Msamples
+      117600000    -85180.3640    -84380.4869      -799.8771 39m59s/Msamples
+      117700000    -85115.3120    -84330.1533      -785.1587 39m59s/Msamples
+      117800000    -85123.7718    -84356.9453      -766.8265 39m59s/Msamples
+      117900000    -85105.0951    -84354.5058      -750.5893 40m2s/Msamples
+      118000000    -85094.6368    -84331.9190      -762.7177 40m4s/Msamples
+      118100000    -85130.9474    -84397.3473      -733.6001 40m4s/Msamples
+      118200000    -85130.4046    -84364.8611      -765.5435 40m5s/Msamples
+      118300000    -85093.6582    -84368.7356      -724.9226 40m5s/Msamples
+      118400000    -85112.7443    -84369.4398      -743.3045 40m5s/Msamples
+      118500000    -85112.0270    -84357.0613      -754.9656 40m5s/Msamples
+      118600000    -85082.7982    -84360.0620      -722.7361 40m5s/Msamples
+      118700000    -85176.5871    -84409.2603      -767.3267 40m6s/Msamples
+      118800000    -85132.7446    -84364.4695      -768.2750 40m9s/Msamples
+      118900000    -85136.7023    -84376.7707      -759.9315 40m10s/Msamples
+      119000000    -85134.8368    -84365.7686      -769.0681 40m11s/Msamples
+      119100000    -85100.1736    -84341.2369      -758.9366 40m12s/Msamples
+      119200000    -85092.8994    -84360.6683      -732.2311 40m12s/Msamples
+      119300000    -85118.9446    -84354.1224      -764.8222 40m12s/Msamples
+      119400000    -85069.0637    -84359.9182      -709.1454 40m12s/Msamples
+      119500000    -85059.6102    -84373.3419      -686.2682 40m12s/Msamples
+      119600000    -84977.1201    -84382.7862      -594.3339 40m12s/Msamples
+      119700000    -85059.7626    -84404.7769      -654.9857 40m12s/Msamples
+      119800000    -85097.2934    -84350.0026      -747.2908 40m12s/Msamples
+      119900000    -85114.7423    -84381.9357      -732.8066 40m12s/Msamples
+      120000000    -85169.2840    -84362.9616      -806.3223 40m13s/Msamples
+      120100000    -85178.8222    -84411.7899      -767.0323 40m13s/Msamples
+      120200000    -85023.6661    -84340.7937      -682.8723 40m13s/Msamples
+      120300000    -85125.6757    -84371.3079      -754.3677 40m13s/Msamples
+      120400000    -85117.7589    -84371.7181      -746.0408 40m13s/Msamples
+      120500000    -85137.9726    -84373.9394      -764.0331 40m13s/Msamples
+      120600000    -85090.3368    -84361.8099      -728.5268 40m13s/Msamples
+      120700000    -85093.7210    -84339.9705      -753.7504 40m14s/Msamples
+      120800000    -85104.6023    -84387.5825      -717.0197 40m13s/Msamples
+      120900000    -85144.6298    -84376.3305      -768.2992 40m14s/Msamples
+      121000000    -85138.7654    -84357.9472      -780.8182 40m13s/Msamples
+      121100000    -85076.7678    -84335.8888      -740.8790 40m14s/Msamples
+      121200000    -85109.4191    -84347.9583      -761.4608 40m13s/Msamples
+      121300000    -85126.8440    -84354.5431      -772.3009 40m14s/Msamples
+      121400000    -85106.4029    -84359.6126      -746.7902 40m13s/Msamples
+      121500000    -85140.3580    -84355.2831      -785.0749 40m14s/Msamples
+      121600000    -85158.7488    -84383.6726      -775.0762 40m14s/Msamples
+      121700000    -85168.6292    -84353.1159      -815.5133 40m13s/Msamples
+      121800000    -85110.8618    -84368.6400      -742.2217 40m14s/Msamples
+      121900000    -85123.8684    -84371.8129      -752.0554 40m14s/Msamples
+      122000000    -85086.7229    -84342.0798      -744.6431 40m14s/Msamples
+      122100000    -85102.1138    -84342.1929      -759.9208 40m14s/Msamples
+      122200000    -85098.0671    -84335.7648      -762.3023 40m15s/Msamples
+      122300000    -85141.5576    -84358.6515      -782.9061 40m15s/Msamples
+      122400000    -85147.2427    -84361.4476      -785.7951 40m15s/Msamples
+      122500000    -85132.9584    -84354.5971      -778.3612 40m15s/Msamples
+      122600000    -85133.7540    -84347.4301      -786.3238 40m15s/Msamples
+      122700000    -85131.2379    -84361.6486      -769.5893 40m15s/Msamples
+      122800000    -85133.0372    -84350.2971      -782.7400 40m15s/Msamples
+      122900000    -85126.0132    -84335.8788      -790.1343 40m15s/Msamples
+      123000000    -85108.5390    -84331.9922      -776.5468 40m15s/Msamples
+      123100000    -85156.3122    -84358.8418      -797.4703 40m16s/Msamples
+      123200000    -85131.4313    -84364.5879      -766.8434 40m16s/Msamples
+      123300000    -85035.3123    -84348.5723      -686.7399 40m16s/Msamples
+      123400000    -85069.5916    -84368.2155      -701.3760 40m16s/Msamples
+      123500000    -85102.3370    -84339.0465      -763.2904 40m16s/Msamples
+      123600000    -85067.6680    -84348.6464      -719.0216 40m16s/Msamples
+      123700000    -85098.9431    -84355.1333      -743.8097 40m16s/Msamples
+      123800000    -85095.3772    -84352.4478      -742.9293 40m16s/Msamples
+      123900000    -85126.4429    -84349.9701      -776.4727 40m16s/Msamples
+      124000000    -85130.5733    -84360.6012      -769.9721 40m16s/Msamples
+      124100000    -85074.4264    -84322.9817      -751.4447 40m16s/Msamples
+      124200000    -85099.9064    -84363.4661      -736.4402 40m16s/Msamples
+      124300000    -85082.9589    -84345.2636      -737.6952 40m16s/Msamples
+      124400000    -85059.8376    -84311.6059      -748.2316 40m16s/Msamples
+      124500000    -85128.6198    -84373.9771      -754.6426 40m16s/Msamples
+      124600000    -85111.1726    -84334.4078      -776.7648 40m16s/Msamples
+      124700000    -85121.9906    -84369.9569      -752.0336 40m16s/Msamples
+      124800000    -85145.8655    -84350.8105      -795.0549 40m16s/Msamples
+      124900000    -85106.9448    -84327.8088      -779.1360 40m17s/Msamples
+      125000000    -85128.5152    -84366.6543      -761.8609 40m17s/Msamples
+      125100000    -85148.2711    -84350.7480      -797.5231 40m17s/Msamples
+      125200000    -85091.7861    -84364.8508      -726.9353 40m17s/Msamples
+      125300000    -85109.3256    -84393.8405      -715.4851 40m18s/Msamples
+      125400000    -85075.5004    -84381.1251      -694.3753 40m18s/Msamples
+      125500000    -85103.8502    -84343.3050      -760.5451 40m18s/Msamples
+      125600000    -85135.1965    -84379.6738      -755.5227 40m18s/Msamples
+      125700000    -85122.6358    -84371.0624      -751.5734 40m18s/Msamples
+      125800000    -85149.4137    -84352.6757      -796.7380 40m18s/Msamples
+      125900000    -85150.7775    -84355.5288      -795.2487 40m18s/Msamples
+      126000000    -85149.5965    -84356.8729      -792.7235 40m18s/Msamples
+      126100000    -85119.7443    -84344.6261      -775.1182 40m19s/Msamples
+      126200000    -85160.7718    -84377.7173      -783.0544 40m19s/Msamples
+      126300000    -85058.8486    -84335.6752      -723.1734 40m19s/Msamples
+      126400000    -85109.2204    -84351.2710      -757.9494 40m19s/Msamples
+      126500000    -85103.7036    -84392.6751      -711.0285 40m19s/Msamples
+      126600000    -85101.8106    -84324.9605      -776.8501 40m19s/Msamples
+      126700000    -85112.2058    -84346.5283      -765.6774 40m19s/Msamples
+      126800000    -85121.3656    -84403.6453      -717.7203 40m19s/Msamples
+      126900000    -85051.6843    -84349.4148      -702.2694 40m19s/Msamples
+      127000000    -85107.1084    -84365.4463      -741.6620 40m19s/Msamples
+      127100000    -85076.0981    -84370.1925      -705.9055 40m20s/Msamples
+      127200000    -85117.2198    -84375.1923      -742.0275 40m20s/Msamples
+      127300000    -85108.5231    -84354.5180      -754.0051 40m20s/Msamples
+      127400000    -85095.3811    -84352.7294      -742.6517 40m20s/Msamples
+      127500000    -85176.8089    -84400.1267      -776.6821 40m20s/Msamples
+      127600000    -85143.3490    -84371.1207      -772.2283 40m20s/Msamples
+      127700000    -85192.9995    -84385.3811      -807.6183 40m20s/Msamples
+      127800000    -85192.5713    -84398.3118      -794.2594 40m20s/Msamples
+      127900000    -85173.6594    -84380.0523      -793.6070 40m20s/Msamples
+      128000000    -85148.5932    -84395.7682      -752.8250 40m20s/Msamples
+      128100000    -85087.4558    -84379.5883      -707.8675 40m21s/Msamples
+      128200000    -85021.4397    -84361.3973      -660.0424 40m21s/Msamples
+      128300000    -85084.2017    -84397.6027      -686.5989 40m21s/Msamples
+      128400000    -85070.6785    -84351.5734      -719.1051 40m21s/Msamples
+      128500000    -85135.0617    -84368.4982      -766.5635 40m21s/Msamples
+      128600000    -85123.4061    -84342.1946      -781.2115 40m21s/Msamples
+      128700000    -85163.1607    -84354.2742      -808.8865 40m21s/Msamples
+      128800000    -85140.6302    -84368.8975      -771.7327 40m21s/Msamples
+      128900000    -85153.5329    -84348.6261      -804.9067 40m22s/Msamples
+      129000000    -85131.7929    -84339.5805      -792.2123 40m22s/Msamples
+      129100000    -85139.2268    -84386.7046      -752.5222 40m23s/Msamples
+      129200000    -85100.8505    -84363.4434      -737.4070 40m23s/Msamples
+      129300000    -85187.5100    -84370.9422      -816.5678 40m23s/Msamples
+      129400000    -85146.5182    -84380.9448      -765.5733 40m23s/Msamples
+      129500000    -85159.0718    -84375.4805      -783.5912 40m23s/Msamples
+      129600000    -85078.2320    -84356.7811      -721.4508 40m23s/Msamples
+      129700000    -85171.3611    -84397.3014      -774.0596 40m23s/Msamples
+      129800000    -85113.9352    -84377.4757      -736.4595 40m22s/Msamples
+      129900000    -85104.6885    -84328.5297      -776.1588 40m22s/Msamples
+      130000000    -85134.9743    -84382.9121      -752.0622 40m22s/Msamples
+      130100000    -85045.5068    -84337.1166      -708.3902 40m22s/Msamples
+      130200000    -85115.8912    -84354.6950      -761.1962 40m21s/Msamples
+      130300000    -85079.1666    -84382.8601      -696.3064 40m21s/Msamples
+      130400000    -85097.6858    -84357.7710      -739.9148 40m21s/Msamples
+      130500000    -85084.6074    -84324.1592      -760.4482 40m20s/Msamples
+      130600000    -85120.0895    -84351.9690      -768.1204 40m20s/Msamples
+      130700000    -85129.0478    -84368.5271      -760.5207 40m20s/Msamples
+      130800000    -85070.6708    -84329.4168      -741.2539 40m20s/Msamples
+      130900000    -85126.4448    -84361.3524      -765.0924 40m20s/Msamples
+      131000000    -85093.3324    -84357.3384      -735.9939 40m20s/Msamples
+      131100000    -85060.8321    -84301.8803      -758.9517 40m20s/Msamples
+      131200000    -85121.0982    -84348.0458      -773.0523 40m20s/Msamples
+      131300000    -85164.1110    -84365.4142      -798.6967 40m19s/Msamples
+      131400000    -85085.5280    -84344.5640      -740.9639 40m20s/Msamples
+      131500000    -85095.6968    -84335.7678      -759.9290 40m19s/Msamples
+      131600000    -85144.4207    -84327.5811      -816.8396 40m19s/Msamples
+      131700000    -85151.0945    -84364.5401      -786.5543 40m19s/Msamples
+      131800000    -85122.8327    -84375.7664      -747.0662 40m19s/Msamples
+      131900000    -85127.9195    -84387.5469      -740.3726 40m19s/Msamples
+      132000000    -85140.8545    -84368.4585      -772.3960 40m19s/Msamples
+      132100000    -85158.4389    -84385.8932      -772.5456 40m19s/Msamples
+      132200000    -85136.7430    -84392.2832      -744.4597 40m19s/Msamples
+      132300000    -85117.2406    -84338.0558      -779.1847 40m19s/Msamples
+      132400000    -85095.9252    -84351.2613      -744.6639 40m19s/Msamples
+      132500000    -85093.1826    -84345.2559      -747.9267 40m19s/Msamples
+      132600000    -85123.2052    -84364.5958      -758.6093 40m18s/Msamples
+      132700000    -85064.9518    -84388.2622      -676.6896 40m18s/Msamples
+      132800000    -85062.1093    -84350.8413      -711.2679 40m18s/Msamples
+      132900000    -85078.6541    -84357.1984      -721.4556 40m18s/Msamples
+      133000000    -85144.4081    -84371.9776      -772.4304 40m18s/Msamples
+      133100000    -85140.8140    -84363.7934      -777.0205 40m18s/Msamples
+      133200000    -85181.3478    -84388.6017      -792.7461 40m18s/Msamples
+      133300000    -85074.3205    -84372.8310      -701.4895 40m18s/Msamples
+      133400000    -85075.9874    -84400.9812      -675.0061 40m17s/Msamples
+      133500000    -85128.1651    -84381.2766      -746.8884 40m17s/Msamples
+      133600000    -85077.8423    -84327.0394      -750.8028 40m17s/Msamples
+      133700000    -85089.9747    -84332.2534      -757.7213 40m17s/Msamples
+      133800000    -85091.4875    -84351.9737      -739.5137 40m17s/Msamples
+      133900000    -85065.2451    -84340.3557      -724.8893 40m16s/Msamples
+      134000000    -85097.1118    -84335.8324      -761.2793 40m16s/Msamples
+      134100000    -85067.3252    -84344.1946      -723.1306 40m16s/Msamples
+      134200000    -85142.5453    -84328.5920      -813.9533 40m16s/Msamples
+      134300000    -85140.1247    -84339.1658      -800.9589 40m16s/Msamples
+      134400000    -85142.7224    -84361.2599      -781.4624 40m16s/Msamples
+      134500000    -85117.1090    -84351.3520      -765.7569 40m16s/Msamples
+      134600000    -85091.7056    -84344.6140      -747.0916 40m16s/Msamples
+      134700000    -85138.5033    -84379.3417      -759.1616 40m15s/Msamples
+      134800000    -85105.3474    -84358.2092      -747.1381 40m15s/Msamples
+      134900000    -85107.5866    -84340.8450      -766.7416 40m15s/Msamples
+      135000000    -85083.0001    -84345.1229      -737.8772 40m15s/Msamples
+      135100000    -85112.6356    -84328.1001      -784.5355 40m15s/Msamples
+      135200000    -85130.2495    -84337.5146      -792.7348 40m15s/Msamples
+      135300000    -85117.5430    -84379.1006      -738.4423 40m15s/Msamples
+      135400000    -85130.9379    -84358.1340      -772.8039 40m15s/Msamples
+      135500000    -85113.2567    -84353.4213      -759.8354 40m15s/Msamples
+      135600000    -85133.1777    -84348.2797      -784.8980 40m15s/Msamples
+      135700000    -85164.0589    -84399.5498      -764.5090 40m15s/Msamples
+      135800000    -85132.8374    -84353.4499      -779.3874 40m14s/Msamples
+      135900000    -85106.2692    -84348.2295      -758.0397 40m14s/Msamples
+      136000000    -85089.0750    -84346.2026      -742.8723 40m14s/Msamples
+      136100000    -85175.9287    -84370.1097      -805.8189 40m14s/Msamples
+      136200000    -85153.5823    -84373.0632      -780.5190 40m14s/Msamples
+      136300000    -85094.2621    -84351.9974      -742.2647 40m14s/Msamples
+      136400000    -85093.7477    -84379.7523      -713.9954 40m14s/Msamples
+      136500000    -85117.8206    -84340.8222      -776.9984 40m14s/Msamples
+      136600000    -85102.6032    -84359.7761      -742.8271 40m14s/Msamples
+      136700000    -85079.7079    -84382.5032      -697.2046 40m14s/Msamples
+      136800000    -85111.4708    -84371.5543      -739.9164 40m13s/Msamples
+      136900000    -85084.5592    -84345.5826      -738.9765 40m13s/Msamples
+      137000000    -85113.5799    -84346.8935      -766.6864 40m13s/Msamples
+      137100000    -85158.4527    -84355.0443      -803.4084 40m13s/Msamples
+      137200000    -85118.0408    -84373.1056      -744.9352 40m13s/Msamples
+      137300000    -85122.8979    -84363.4443      -759.4535 40m13s/Msamples
+      137400000    -85071.1964    -84328.6210      -742.5753 40m13s/Msamples
+      137500000    -85070.9550    -84339.8532      -731.1017 40m13s/Msamples
+      137600000    -85123.1696    -84346.4419      -776.7276 40m13s/Msamples
+      137700000    -85109.2411    -84317.2269      -792.0141 40m14s/Msamples
+      137800000    -85135.7828    -84359.9626      -775.8202 40m14s/Msamples
+      137900000    -85121.0830    -84364.9669      -756.1161 40m14s/Msamples
+      138000000    -85091.7063    -84366.5849      -725.1214 40m14s/Msamples
+      138100000    -85071.3509    -84324.9394      -746.4115 40m14s/Msamples
+      138200000    -85127.3236    -84364.8177      -762.5059 40m14s/Msamples
+      138300000    -85156.1931    -84349.4963      -806.6967 40m14s/Msamples
+      138400000    -85162.7558    -84362.1588      -800.5969 40m15s/Msamples
+      138500000    -85155.6186    -84363.1308      -792.4878 40m15s/Msamples
+      138600000    -85156.6498    -84347.6274      -809.0224 40m15s/Msamples
+      138700000    -85114.5068    -84370.7850      -743.7218 40m15s/Msamples
+      138800000    -85052.1019    -84320.6043      -731.4975 40m15s/Msamples
+      138900000    -85076.6222    -84348.8075      -727.8146 40m16s/Msamples
+      139000000    -85036.2088    -84333.0222      -703.1866 40m16s/Msamples
+      139100000    -85084.6396    -84348.4403      -736.1992 40m17s/Msamples
+      139200000    -85086.3192    -84346.9038      -739.4154 40m17s/Msamples
+      139300000    -85112.8862    -84360.5465      -752.3396 40m17s/Msamples
+      139400000    -85161.4198    -84372.6487      -788.7711 40m17s/Msamples
+      139500000    -85167.0024    -84385.3724      -781.6300 40m17s/Msamples
+      139600000    -85081.7840    -84366.8601      -714.9239 40m17s/Msamples
+      139700000    -85129.8000    -84385.4403      -744.3597 40m17s/Msamples
+      139800000    -85110.8885    -84333.0170      -777.8715 40m17s/Msamples
+      139900000    -85114.6152    -84348.2479      -766.3673 40m16s/Msamples
+      140000000    -85102.1669    -84349.2589      -752.9079 40m16s/Msamples
+      140100000    -85097.4658    -84349.3717      -748.0940 40m16s/Msamples
+      140200000    -85052.5724    -84321.0745      -731.4978 40m16s/Msamples
+      140300000    -85107.6370    -84339.1725      -768.4645 40m16s/Msamples
+      140400000    -85099.5731    -84344.2189      -755.3541 40m16s/Msamples
+      140500000    -85044.6773    -84334.3382      -710.3391 40m16s/Msamples
+      140600000    -85085.7046    -84341.5206      -744.1839 40m16s/Msamples
+      140700000    -85139.4573    -84363.0581      -776.3992 40m16s/Msamples
+      140800000    -85168.2414    -84373.7256      -794.5158 40m16s/Msamples
+      140900000    -85104.1393    -84355.8234      -748.3158 40m15s/Msamples
+      141000000    -85080.3660    -84349.3169      -731.0490 40m15s/Msamples
+      141100000    -85123.0145    -84377.9534      -745.0610 40m15s/Msamples
+      141200000    -85108.4707    -84328.3977      -780.0730 40m15s/Msamples
+      141300000    -85146.5491    -84346.6666      -799.8824 40m15s/Msamples
+      141400000    -85103.3321    -84344.8177      -758.5144 40m15s/Msamples
+      141500000    -85103.4079    -84336.0468      -767.3611 40m15s/Msamples
+      141600000    -85097.8415    -84361.9383      -735.9032 40m15s/Msamples
+      141700000    -85140.8299    -84340.0903      -800.7396 40m14s/Msamples
+      141800000    -85115.3645    -84354.1869      -761.1775 40m14s/Msamples
+      141900000    -85095.4418    -84331.3039      -764.1378 40m14s/Msamples
+      142000000    -85129.7125    -84335.4312      -794.2813 40m14s/Msamples
+      142100000    -85065.2796    -84323.0153      -742.2643 40m14s/Msamples
+      142200000    -85123.2213    -84365.4096      -757.8117 40m14s/Msamples
+      142300000    -85087.2867    -84356.4694      -730.8172 40m14s/Msamples
+      142400000    -85121.9745    -84344.2769      -777.6975 40m14s/Msamples
+      142500000    -85130.7468    -84371.9864      -758.7604 40m14s/Msamples
+      142600000    -85162.3313    -84349.1472      -813.1840 40m14s/Msamples
+      142700000    -85153.0182    -84347.5217      -805.4965 40m14s/Msamples
+      142800000    -85142.3846    -84336.1138      -806.2708 40m14s/Msamples
+      142900000    -85125.2208    -84338.0036      -787.2171 40m14s/Msamples
+      143000000    -85068.6899    -84317.6392      -751.0507 40m14s/Msamples
+      143100000    -85121.7135    -84355.7631      -765.9504 40m14s/Msamples
+      143200000    -85133.3279    -84370.2095      -763.1184 40m14s/Msamples
+      143300000    -85063.8725    -84348.5049      -715.3675 40m14s/Msamples
+      143400000    -85071.2040    -84356.4033      -714.8006 40m14s/Msamples
+      143500000    -85142.6039    -84369.0530      -773.5509 40m13s/Msamples
+      143600000    -85090.4356    -84331.9656      -758.4699 40m13s/Msamples
+      143700000    -85112.3511    -84364.1674      -748.1837 40m13s/Msamples
+      143800000    -85113.8578    -84343.5594      -770.2984 40m13s/Msamples
+      143900000    -85145.1660    -84358.9560      -786.2100 40m13s/Msamples
+      144000000    -85111.2670    -84351.8069      -759.4600 40m13s/Msamples
+      144100000    -85080.1206    -84334.8453      -745.2753 40m12s/Msamples
+      144200000    -85135.1227    -84344.1827      -790.9399 40m12s/Msamples
+      144300000    -85036.9285    -84346.9213      -690.0072 40m12s/Msamples
+      144400000    -85102.6479    -84325.0189      -777.6290 40m12s/Msamples
+      144500000    -85139.4501    -84373.5319      -765.9181 40m12s/Msamples
+      144600000    -85140.6402    -84369.1868      -771.4533 40m12s/Msamples
+      144700000    -85153.6115    -84358.4589      -795.1526 40m11s/Msamples
+      144800000    -85139.9627    -84368.2827      -771.6800 40m11s/Msamples
+      144900000    -85163.1555    -84381.3028      -781.8527 40m11s/Msamples
+      145000000    -85122.0240    -84361.3337      -760.6903 40m11s/Msamples
+      145100000    -85091.0685    -84366.8919      -724.1765 40m11s/Msamples
+      145200000    -85085.5808    -84348.0379      -737.5428 40m11s/Msamples
+      145300000    -85095.1357    -84338.5466      -756.5890 40m11s/Msamples
+      145400000    -85155.8959    -84363.8705      -792.0254 40m11s/Msamples
+      145500000    -85152.9052    -84360.4801      -792.4251 40m11s/Msamples
+      145600000    -85085.1106    -84343.9711      -741.1394 40m11s/Msamples
+      145700000    -85081.8435    -84335.0893      -746.7542 40m10s/Msamples
+      145800000    -85068.0517    -84357.1158      -710.9358 40m10s/Msamples
+      145900000    -85108.0528    -84378.5334      -729.5194 40m10s/Msamples
+      146000000    -85085.0872    -84364.7698      -720.3174 40m10s/Msamples
+      146100000    -85115.5872    -84344.0955      -771.4916 40m10s/Msamples
+      146200000    -85103.9621    -84365.7713      -738.1907 40m10s/Msamples
+      146300000    -85141.7040    -84378.7760      -762.9279 40m10s/Msamples
+      146400000    -85103.3793    -84349.3752      -754.0040 40m10s/Msamples
+      146500000    -85106.9540    -84335.4120      -771.5420 40m10s/Msamples
+      146600000    -85092.3415    -84355.1775      -737.1640 40m10s/Msamples
+      146700000    -85129.3790    -84353.3291      -776.0499 40m10s/Msamples
+      146800000    -85041.5661    -84320.3913      -721.1748 40m10s/Msamples
+      146900000    -85100.4064    -84338.7303      -761.6761 40m10s/Msamples
+      147000000    -85052.6543    -84346.3465      -706.3078 40m10s/Msamples
+      147100000    -85136.4879    -84365.5632      -770.9247 40m10s/Msamples
+      147200000    -85151.9273    -84370.9737      -780.9536 40m9s/Msamples
+      147300000    -85091.4478    -84318.6462      -772.8016 40m9s/Msamples
+      147400000    -85133.1351    -84370.2887      -762.8464 40m9s/Msamples
+      147500000    -85080.5567    -84339.6777      -740.8790 40m10s/Msamples
+      147600000    -85067.9094    -84330.3001      -737.6092 40m10s/Msamples
+      147700000    -85116.8586    -84350.2251      -766.6335 40m10s/Msamples
+      147800000    -85135.9141    -84379.4328      -756.4812 40m10s/Msamples
+      147900000    -85115.7636    -84344.1810      -771.5826 40m10s/Msamples
+      148000000    -85047.1995    -84308.7594      -738.4400 40m10s/Msamples
+      148100000    -85123.7673    -84369.9744      -753.7929 40m10s/Msamples
+      148200000    -85163.6854    -84382.4790      -781.2064 40m10s/Msamples
+      148300000    -85122.2636    -84396.4232      -725.8403 40m10s/Msamples
+      148400000    -85071.1799    -84352.4364      -718.7435 40m10s/Msamples
+      148500000    -85128.5161    -84387.2954      -741.2206 40m10s/Msamples
+      148600000    -85097.8460    -84356.6450      -741.2009 40m10s/Msamples
+      148700000    -85085.0501    -84356.5258      -728.5243 40m10s/Msamples
+      148800000    -85114.8039    -84362.4181      -752.3857 40m10s/Msamples
+      148900000    -85108.4818    -84348.4238      -760.0580 40m10s/Msamples
+      149000000    -85083.6310    -84338.2271      -745.4039 40m11s/Msamples
+      149100000    -85129.1747    -84352.5516      -776.6230 40m11s/Msamples
+      149200000    -85119.8039    -84362.8813      -756.9225 40m11s/Msamples
+      149300000    -85135.2923    -84362.9730      -772.3192 40m11s/Msamples
+      149400000    -85123.7913    -84361.1602      -762.6310 40m11s/Msamples
+      149500000    -85141.5199    -84359.3598      -782.1600 40m11s/Msamples
+      149600000    -85094.3308    -84362.7060      -731.6247 40m11s/Msamples
+      149700000    -85073.6439    -84364.4297      -709.2142 40m11s/Msamples
+      149800000    -84977.8500    -84347.9645      -629.8855 40m11s/Msamples
+      149900000    -85016.1727    -84351.7435      -664.4291 40m12s/Msamples
+      150000000    -85074.7839    -84335.4098      -739.3741 40m12s/Msamples
+      150100000    -85087.6960    -84348.8312      -738.8647 40m12s/Msamples
+      150200000    -85118.1522    -84342.6813      -775.4709 40m12s/Msamples
+      150300000    -85108.3178    -84340.9491      -767.3686 40m12s/Msamples
+      150400000    -85158.9865    -84370.4274      -788.5590 40m12s/Msamples
+      150500000    -85096.5077    -84349.8029      -746.7048 40m12s/Msamples
+      150600000    -85080.4067    -84321.0866      -759.3201 40m12s/Msamples
+      150700000    -85192.3267    -84397.8416      -794.4851 40m12s/Msamples
+      150800000    -85034.4356    -84366.0955      -668.3400 40m13s/Msamples
+      150900000    -85094.9851    -84343.7824      -751.2027 40m13s/Msamples
+      151000000    -85091.1582    -84333.1500      -758.0081 40m13s/Msamples
+      151100000    -85056.3377    -84355.8863      -700.4513 40m13s/Msamples
+      151200000    -85088.4070    -84359.4532      -728.9537 40m13s/Msamples
+      151300000    -85091.6479    -84344.3011      -747.3468 40m14s/Msamples
+      151400000    -85092.7839    -84328.7978      -763.9860 40m14s/Msamples
+      151500000    -85128.9472    -84366.5971      -762.3501 40m15s/Msamples
+      151600000    -85121.1759    -84356.1145      -765.0614 40m15s/Msamples
+      151700000    -85123.4713    -84345.3320      -778.1392 40m15s/Msamples
+      151800000    -85039.0607    -84331.9079      -707.1528 40m16s/Msamples
+      151900000    -85056.7529    -84349.0026      -707.7503 40m16s/Msamples
+      152000000    -85018.3172    -84347.7547      -670.5624 40m17s/Msamples
+      152100000    -85061.1645    -84327.1494      -734.0150 40m17s/Msamples
+      152200000    -85056.2272    -84316.5863      -739.6408 40m17s/Msamples
+      152300000    -85136.4951    -84361.4816      -775.0135 40m17s/Msamples
+      152400000    -85150.7667    -84378.7704      -771.9962 40m17s/Msamples
+      152500000    -85174.4772    -84353.2633      -821.2139 40m17s/Msamples
+      152600000    -85092.6523    -84317.3068      -775.3454 40m17s/Msamples
+      152700000    -85146.8633    -84390.8119      -756.0514 40m17s/Msamples
+      152800000    -85048.8952    -84339.0216      -709.8735 40m17s/Msamples
+      152900000    -85131.3420    -84350.2683      -781.0736 40m17s/Msamples
+      153000000    -85107.1165    -84333.8437      -773.2727 40m17s/Msamples
+      153100000    -85138.1657    -84358.7937      -779.3720 40m17s/Msamples
+      153200000    -85114.3481    -84370.5369      -743.8112 40m17s/Msamples
+      153300000    -85119.3986    -84357.5514      -761.8472 40m17s/Msamples
+      153400000    -85101.6243    -84360.7890      -740.8352 40m17s/Msamples
+      153500000    -85130.6998    -84339.4340      -791.2658 40m16s/Msamples
+      153600000    -85086.8153    -84336.7716      -750.0437 40m16s/Msamples
+      153700000    -85138.3029    -84355.9000      -782.4029 40m16s/Msamples
+      153800000    -85103.2780    -84351.8650      -751.4129 40m16s/Msamples
+      153900000    -85083.0323    -84329.3664      -753.6658 40m16s/Msamples
+      154000000    -85087.4179    -84369.7034      -717.7144 40m16s/Msamples
+      154100000    -85104.1639    -84345.4289      -758.7350 40m16s/Msamples
+      154200000    -85045.2010    -84352.8842      -692.3168 40m16s/Msamples
+      154300000    -85044.3418    -84355.2472      -689.0945 40m16s/Msamples
+      154400000    -85118.2535    -84352.9049      -765.3485 40m16s/Msamples
+      154500000    -85089.9282    -84334.0989      -755.8292 40m16s/Msamples
+      154600000    -85094.0655    -84359.7558      -734.3097 40m16s/Msamples
+      154700000    -85118.3859    -84362.0463      -756.3396 40m16s/Msamples
+      154800000    -85109.1312    -84343.1795      -765.9517 40m16s/Msamples
+      154900000    -85049.9832    -84341.2785      -708.7047 40m16s/Msamples

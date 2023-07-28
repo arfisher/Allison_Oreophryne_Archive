@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Allison Fisher">
+<meta name="dcterms.date" content="2023-05-02">
+
+<title>Assessing validity of two new taxonomic traits</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Analysis_Code_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Analysis_Code_files/libs/quarto-html/quarto.js"></script>
+<script src="Analysis_Code_files/libs/quarto-html/popper.min.js"></script>
+<script src="Analysis_Code_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Analysis_Code_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Analysis_Code_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Analysis_Code_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Analysis_Code_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Analysis_Code_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Analysis_Code_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="Analysis_Code_files/libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+<script src="Analysis_Code_files/libs/tabwid-1.1.3/tabwid.js"></script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assessing validity of two new taxonomic traits</h1>
+<p class="subtitle lead">Data Analysis</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Allison Fisher </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 2, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>After discovering the Papuan genus of microhylid frog, <em>(Oreophryne)</em>, is polyphyletic through molecular phylogenetic analysis, I seek to identify morphological characteristics to distinguish the two monophyletic clades. The genus containing type species “<em>(Oreophryne senckenbergiana)</em>” will retain the name <em>(Oreophryne)</em>. The new genus will be called <em>(Auparoparo)</em> in this study.</p>
+<section id="proposed-traits" class="level1">
+<h1>Proposed traits</h1>
+<p>Through visual observation, I have suspected two distinctions between these highly convergent groups. I have measured images of museum specimens (6 species per genus, ~5 individuals per species) using the software ImageJ to assess if these traits are quantitatively different.</p>
+<p>One is the ratio of finger pad width to toe pad width. This character will be represented by the variable ft. <em>(Oreophryne)</em>s tend to have more equally sized finger and toe pads so I expect their ft ratio to be closer to 1. <em>(Auparoparo)</em>s have larger finger pads than toe pads so I expect their ft ratio to be larger than 1.</p>
+<p>The other trait I suspect is the shape of the upper palatal grooves. This character will be represented by the variable ap which is the ratio of the width of the grooves clostest to the nares (anterior) vs closest to the pharynx (posterior). <em>(Oreophryne)</em>s tend to have more parallel grooves so I expect their ap ratio to be closer to 1. <em>(Auparoparo)</em>s have grooves which taper towards the pharynx so I expect their ap ratio to be larger than 1.</p>
+</section>
+<section id="analysis" class="level1">
+<h1>Analysis</h1>
+<p>I will be testing a variety of analyses to look for significance in these traits.</p>
+</section>
+<section id="set-up-for-r" class="level1">
+<h1>Set up for R</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">read_chunk</span>(<span class="st">'analysiscode.R'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Load packages, functions, and paths</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load needed packages. make sure they are installed.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2) <span class="co">#for plotting</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(magrittr) <span class="co">#for piping</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: magrittr</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(knitr) <span class="co">#for formatting output</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: knitr</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: dplyr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(phytools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: phytools</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ape</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'ape'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:dplyr':
+
+    where</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: maps</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(skimr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: skimr</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(rempsyc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: rempsyc</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Suggested APA citation: Thériault, R. (2022). rempsyc: Convenience functions for psychology 
+(R package version 0.1.1) [Computer software]. https://rempsyc.remi-theriault.com </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(effectsize)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: effectsize</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(flextable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: flextable</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'flextable'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:ape':
+
+    rotate</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(corrr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: corrr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'corrr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:skimr':
+
+    focus</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggcorrplot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggcorrplot</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(FactoMineR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: FactoMineR</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(factoextra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: factoextra</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">#path to data and results </span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="st">"../../Data/Processed_data/processeddata.rds"</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>results_path <span class="ot">&lt;-</span> <span class="st">"../../Results/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Load data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>dat2 <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(data_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># function to paste path to output filenames</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>addpath <span class="ot">&lt;-</span> <span class="cf">function</span>( filename, <span class="at">path=</span>data_path ) {</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    location <span class="ot">&lt;-</span> <span class="fu">paste</span>( path, filename, <span class="at">sep=</span><span class="st">""</span>)</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>( location )</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="summarize" class="level1">
+<h1>Summarize</h1>
+<p>Another look at the data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create summary table of the data using skimr to use in paper</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co"># variables, sample size, mean, standard error</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>sk <span class="ot">&lt;-</span> skimr<span class="sc">::</span><span class="fu">skim</span>(dat2)  <span class="co"># save skim object</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>sk <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(sk) <span class="co"># save as data.frame</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sk)  <span class="co"># see the variable names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  skim_type skim_variable n_missing complete_rate character.min character.max
+1 character         genus         0             1            10            10
+2 character       species         0             1             4            10
+3   numeric          BPBM         0             1            NA            NA
+4   numeric           SVL         0             1            NA            NA
+5   numeric        finger         0             1            NA            NA
+6   numeric           toe         0             1            NA            NA
+  character.empty character.n_unique character.whitespace numeric.mean
+1               0                  2                    0           NA
+2               0                 12                    0           NA
+3              NA                 NA                   NA 26667.435484
+4              NA                 NA                   NA    24.822581
+5              NA                 NA                   NA     1.810130
+6              NA                 NA                   NA     1.501818
+    numeric.sd   numeric.p0  numeric.p25  numeric.p50  numeric.p75 numeric.p100
+1           NA           NA           NA           NA           NA           NA
+2           NA           NA           NA           NA           NA           NA
+3 9536.8049838 1.611900e+04 17983.250000 23133.000000 33777.500000 47656.000000
+4    5.1612179 1.690000e+01    21.550000    24.600000    26.925000    39.400000
+5    0.5482628 8.413504e-01     1.405488     1.756798     2.053678     3.544853
+6    0.5644414 5.286453e-01     1.102037     1.420808     1.695300     3.197404
+  numeric.hist
+1         &lt;NA&gt;
+2         &lt;NA&gt;
+3        ▇▂▅▂▂
+4        ▅▇▅▂▁
+5        ▅▇▇▂▁
+6        ▃▇▃▁▁</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>nrows <span class="ot">&lt;-</span> <span class="fu">dim</span>(dat2)[<span class="dv">1</span>] <span class="co"># total number of rows</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>sk<span class="sc">$</span>N <span class="ot">&lt;-</span> nrows <span class="sc">-</span> sk<span class="sc">$</span>n_missing  <span class="co"># sample size of each variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select only the variable, N, mean, sd, and category counts</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>sk.table <span class="ot">&lt;-</span> sk[<span class="fu">c</span>(<span class="st">"skim_variable"</span>, <span class="st">"N"</span>, <span class="st">"numeric.mean"</span>, <span class="st">"numeric.sd"</span>)]</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(sk.table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Variable"</span>, <span class="st">"N"</span>, <span class="st">"Mean"</span>, <span class="st">"SE"</span>) <span class="co"># rename SD as SE</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>sk.table<span class="sc">$</span>SE <span class="ot">&lt;-</span> sk.table<span class="sc">$</span>SE<span class="sc">/</span><span class="fu">sqrt</span>(sk.table<span class="sc">$</span>N) <span class="co"># calculate SE</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">knitr.kable.NA =</span> <span class="st">""</span>)</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(sk.table, <span class="at">digits=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">SE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">genus</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">species</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BPBM</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">26667.44</td>
+<td style="text-align: right;">1211.18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SVL</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">24.82</td>
+<td style="text-align: right;">0.66</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">finger</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">1.81</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">toe</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">1.50</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ft</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">1.24</td>
+<td style="text-align: right;">0.02</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">anterior</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">0.04</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">posterior</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">1.49</td>
+<td style="text-align: right;">0.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ap</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">1.37</td>
+<td style="text-align: right;">0.03</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save summary table</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(sk.table, <span class="at">file =</span> <span class="fu">addpath</span>(<span class="st">"summary_table.rds"</span>, results_path))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s look at our variables on a species and genus level</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lets see means for each species</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>dat2<span class="sc">$</span>gensp <span class="ot">&lt;-</span> <span class="fu">paste0</span>(dat2<span class="sc">$</span>genus, dat2<span class="sc">$</span>species) <span class="co">#combine genus and species names to sort species by genus</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>spec.means <span class="ot">&lt;-</span> dat2 <span class="sc">%&gt;%</span>                                      </span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gensp) <span class="sc">%&gt;%</span>                         </span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(SVL, finger, toe, ft, anterior, posterior, ap),          </span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>               <span class="fu">list</span>(mean)) </span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(spec.means)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 8
+   gensp                  SVL finger   toe    ft anterior posterior    ap
+   &lt;chr&gt;                &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Auparoparoezra        24.6   1.82 1.32   1.39     2.10      1.44  1.47
+ 2 Auparoparoinsulana    20.9   1.18 0.848  1.41     1.72      1.25  1.38
+ 3 Auparoparomatawan     18.2   1.21 0.995  1.22     1.64      1.16  1.41
+ 4 Auparoparopenelopeia  21.9   1.49 1.06   1.42     1.66      1.11  1.53
+ 5 Auparoparophoebe      25.8   1.87 1.46   1.28     2.10      1.32  1.60
+ 6 Auparoparopicticrus   27.3   2.02 1.41   1.42     2.24      1.44  1.55
+ 7 Oreophryneanamiatoi   27.1   2.03 1.61   1.27     1.92      1.68  1.14
+ 8 Oreophrynebiroi       26.2   1.94 1.60   1.22     2.38      1.77  1.35
+ 9 Oreophryneinornata    35.4   2.83 2.72   1.04     2.20      1.93  1.18
+10 Oreophryneloriae      24.9   1.74 1.60   1.09     2.12      1.58  1.36
+11 Oreophrynenotata      18.2   1.23 1.07   1.15     1.67      1.33  1.28
+12 Oreophryneparkeri     23.2   1.95 1.86   1.06     2.14      1.69  1.28</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># and for each genus</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>gen.means <span class="ot">&lt;-</span> dat2 <span class="sc">%&gt;%</span>                                      </span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(genus) <span class="sc">%&gt;%</span>                         </span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">vars</span>(SVL, finger, toe, ft, anterior, posterior, ap),          </span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">list</span>(mean)) </span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gen.means)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 8
+  genus        SVL finger   toe    ft anterior posterior    ap
+  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1 Auparoparo  23.1   1.60  1.18  1.36     1.91      1.29  1.49
+2 Oreophryne  26.4   2.01  1.80  1.13     2.08      1.68  1.26</code></pre>
+</div>
+</div>
+</section>
+<section id="box-and-whisker-plots" class="level1">
+<h1>Box-and-whisker plots</h1>
+<p>Let’s see how the two ratio traits’ distributions look across genera</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot to screen</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(dat2, <span class="fu">boxplot</span>(ft <span class="sc">~</span> genus))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Analysis_Code_files/figure-html/genus_ft_boxplot-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot to .png file, can also do pdf using `pdf()` function </span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="fu">addpath</span>(<span class="st">"genus_ft_boxplot.png"</span>, results_path))</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(dat2, <span class="fu">boxplot</span>(ft <span class="sc">~</span> genus))</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>quartz_off_screen 
+                2 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot to screen</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(dat2, <span class="fu">boxplot</span>(ap <span class="sc">~</span> genus))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Analysis_Code_files/figure-html/genus_ap_boxplot-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot to .png file, can also do pdf using `pdf()` function </span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="fu">addpath</span>(<span class="st">"genus_ap_boxplot.png"</span>, results_path))</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(dat2, <span class="fu">boxplot</span>(ap <span class="sc">~</span> genus))</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>quartz_off_screen 
+                2 </code></pre>
+</div>
+</div>
+<p>They seem to be different!</p>
+</section>
+<section id="t-tests" class="level1">
+<h1>T-tests</h1>
+<p>Let’s see if there’s significance via t-test between genera</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># trying package rempsyc to make pretty ttest tables, grouped by genus</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>t.test.results <span class="ot">&lt;-</span> <span class="fu">nice_t_test</span>(</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dat2,</span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">response =</span> <span class="fu">names</span>(dat2)[<span class="dv">4</span><span class="sc">:</span><span class="dv">10</span>],</span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="st">"genus"</span>,</span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">warning =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>t.test.results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Dependent Variable         t       df            p          d   CI_lower
+1                SVL -2.667826 49.59027 1.028571e-02 -0.6666211 -1.1761061
+2             finger -3.204496 54.01079 2.272034e-03 -0.8039195 -1.3191814
+3                toe -5.309831 43.01911 3.644605e-06 -1.3196884 -1.8661697
+4                 ft  6.917789 59.59873 3.560283e-09  1.7589834  1.1648374
+5           anterior -1.975234 59.69188 5.287120e-02 -0.5020737 -1.0061416
+6          posterior -5.898589 49.38136 3.271089e-07 -1.4736465 -2.0321081
+7                 ap  4.294668 57.25606 6.846282e-05  1.0969460  0.5577581
+      CI_upper
+1 -0.151879419
+2 -0.282463245
+3 -0.764154366
+4  2.342486997
+5  0.006044147
+6 -0.905490439
+7  1.628181396</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>my_table <span class="ot">&lt;-</span> <span class="fu">nice_table</span>(t.test.results)</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>my_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in raw_block(x, "html", ...): raw_block() requires Pandoc &gt;= 2.0.0</code></pre>
+</div>
+<div class="cell-output-display">
+
+<div class="tabwid"><style>.cl-bde95748{table-layout:auto;}.cl-bddfce1c{font-family:'Times New Roman';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bddfce3a{font-family:'Times New Roman';font-size:12pt;font-weight:normal;font-style:italic;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-bde3efec{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 2;background-color:transparent;}.cl-bde40afe{background-color:transparent;vertical-align: middle;border-bottom: 0.5pt solid rgba(0, 0, 0, 1.00);border-top: 0.5pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bde40b08{background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-bde40b12{background-color:transparent;vertical-align: middle;border-bottom: 0.5pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-bde95748"><caption>Oreophryne vs Auparoparo</caption><thead><tr style="overflow-wrap:break-word;"><th class="cl-bde40afe"><p class="cl-bde3efec"><span class="cl-bddfce1c">Dependent Variable</span></p></th><th class="cl-bde40afe"><p class="cl-bde3efec"><span class="cl-bddfce3a">t</span></p></th><th class="cl-bde40afe"><p class="cl-bde3efec"><span class="cl-bddfce3a">df</span></p></th><th class="cl-bde40afe"><p class="cl-bde3efec"><span class="cl-bddfce3a">p</span></p></th><th class="cl-bde40afe"><p class="cl-bde3efec"><span class="cl-bddfce3a">d</span></p></th><th class="cl-bde40afe"><p class="cl-bde3efec"><span class="cl-bddfce1c">95% CI</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">SVL</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-2.67</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">49.59</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">.010</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-0.67</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">[-1.18, -0.15]</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">finger</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-3.20</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">54.01</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">.002</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-0.80</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">[-1.32, -0.28]</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">toe</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-5.31</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">43.02</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">&lt; .001</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-1.32</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">[-1.87, -0.76]</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">ft</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">6.92</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">59.60</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">&lt; .001</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">1.76</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">[1.16, 2.34]</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">anterior</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-1.98</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">59.69</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">.053</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-0.50</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">[-1.01, 0.01]</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">posterior</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-5.90</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">49.38</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">&lt; .001</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">-1.47</span></p></td><td class="cl-bde40b08"><p class="cl-bde3efec"><span class="cl-bddfce1c">[-2.03, -0.91]</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-bde40b12"><p class="cl-bde3efec"><span class="cl-bddfce1c">ap</span></p></td><td class="cl-bde40b12"><p class="cl-bde3efec"><span class="cl-bddfce1c">4.29</span></p></td><td class="cl-bde40b12"><p class="cl-bde3efec"><span class="cl-bddfce1c">57.26</span></p></td><td class="cl-bde40b12"><p class="cl-bde3efec"><span class="cl-bddfce1c">&lt; .001</span></p></td><td class="cl-bde40b12"><p class="cl-bde3efec"><span class="cl-bddfce1c">1.10</span></p></td><td class="cl-bde40b12"><p class="cl-bde3efec"><span class="cl-bddfce1c">[0.56, 1.63]</span></p></td></tr></tbody></table></div>
+</div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t-test results are really only valid for the ratios ft and ap because finger/toe size and anterior/posterior palatal groove widths likely scale to body size, should be standardized</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="phylogeny-comparison" class="level1">
+<h1>Phylogeny comparison</h1>
+<p>I am trimming our phylogeny to only include measured species and then plotting a character heat map using the means for each species</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I want to use one of the ways to plot either a heat map or dotTree as in this tutorial &lt;http://www.phytools.org/Cordoba2017/ex/15/Plotting-methods.html&gt; </span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>dat3 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(spec.means)</span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(dat3) <span class="ot">&lt;-</span> dat3<span class="sc">$</span>gensp <span class="co">#gensp must be rownames, no character columns allowed</span></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>dat4 <span class="ot">&lt;-</span> dat3[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)]</span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>tree_location <span class="ot">&lt;-</span> <span class="st">"../../Data/Raw_data/asterophryinae_partitions.nex.timetree.nwk"</span></span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.newick</span>(tree_location)</span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a>species<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"Oreophryneinornata"</span>,   <span class="st">"Oreophryneloriae"</span> ,    <span class="st">"Oreophrynenotata"</span>   , </span>
+<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a> <span class="st">"Oreophryneparkeri"</span> ,   <span class="st">"Oreophrynebiroi"</span> ,     <span class="st">"Oreophryneanamiatoi"</span> </span>
+<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a>,<span class="st">"Auparoparopenelopeia"</span>, <span class="st">"Auparoparoinsulana"</span> ,  <span class="st">"Auparoparophoebe"</span>    </span>
+<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a>, <span class="st">"Auparoparopicticrus"</span> , <span class="st">"Auparoparomatawan"</span>  ,  <span class="st">"Auparoparoezra"</span>  ) <span class="co">#select included taxa</span></span>
+<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a>pruned.tree<span class="ot">&lt;-</span><span class="fu">drop.tip</span>(tree,tree<span class="sc">$</span>tip.label[<span class="sc">-</span><span class="fu">match</span>(species, tree<span class="sc">$</span>tip.label)])</span>
+<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a><span class="fu">write.tree</span>(pruned.tree) <span class="co">#remove other taxa</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "(((Oreophrynenotata:0.1332015,Oreophryneparkeri:0.1332016)71:0.0104983,(((Oreophryneinornata:0.0858773,Oreophryneloriae:0.08587722)75:0.0539994,Oreophrynebiroi:0.139877)55:0.00142565,Oreophryneanamiatoi:0.1413024)61:0.00239737)97:0.00426211,((((Auparoparopenelopeia:0.03663222,Auparoparoinsulana:0.0366323)100:0.0189085,(Auparoparophoebe:0.0299792,Auparoparopicticrus:0.02997924)100:0.0255615)98:0.01142652,Auparoparomatawan:0.0669673)72:0.00414723,Auparoparoezra:0.0711146)100:0.07684729)100;"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pruned.tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Analysis_Code_files/figure-html/phylogenyexperiment-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">phylo.heatmap</span>(pruned.tree,dat4,<span class="at">standardize=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Analysis_Code_files/figure-html/phylogenyexperiment-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="fu">addpath</span>(<span class="st">"phylo_heatmap.png"</span>, results_path))</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">phylo.heatmap</span>(pruned.tree,dat4,<span class="at">standardize=</span><span class="cn">TRUE</span>)</span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>quartz_off_screen 
+                2 </code></pre>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

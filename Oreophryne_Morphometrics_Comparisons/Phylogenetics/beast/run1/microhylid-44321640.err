@@ -1,0 +1,84 @@
+
+The following have been reloaded with a version change:
+  1) compiler/GCCcore/10.3.0 => compiler/GCCcore/6.3.0
+  2) lang/Java/11.0.2 => lang/Java/1.8.0_191
+  3) numlib/beagle-lib/3.1.2-GCC-10.3.0 => numlib/beagle-lib/3.0.2-intel-2018.5.274
+  4) tools/binutils/2.36.1-GCCcore-10.3.0 => tools/binutils/2.26-GCCcore-6.3.0
+
+File: senken_run1.xml seed: 1689497866791 threads: 1
+Loading package ORC v1.1.1 Recombination v1.0.0 BEASTLabs v2.0.0 BDSKY v1.5.0 SSM v1.2.0 FastRelaxedClockLogNormal v1.2.0 BEAST.app v2.7.3 BEAST.base v2.7.3    
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 49 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 49 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 115 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 125 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 58 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 48 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 68 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 59 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 150 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 114 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 95 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 170 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 135 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 105 unique site patterns.
+  Using rescaling scheme : dynamic
+  Ignoring ambiguities in tree likelihood.
+  Ignoring character uncertainty in tree likelihood.
+  With 162 unique site patterns.
+  Using rescaling scheme : dynamic
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+Warning: removing transform class beast.base.inference.operator.kernel.Transform$LogConstrainedSumTransform because it should have at least 2 dimensions but it has 0
+slurmstepd: error: *** JOB 44321640 ON node-0099 CANCELLED AT 2023-07-19T08:59:55 DUE TO TIME LIMIT ***
